@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="/static/js/jquery-1.4.2.min.js"></script>
+</head>
+
+<body style="background-image:url(../static/img/001.png)">
+
+<h1 style="text-align:center">{{result.title}}</h1>
+<div id="page" style=" overflow-y:auto; overflow-x:auto; width:1000px; height:1300px;">
+
+
+    <div >
+        <p style="text-align: left;font-size:20px"><h font-size:30px>地区：</h>{{result.region}}</p>
+    </div>
+    <div>
+        <p style="text-align: left;font-size:20px">法院：{{result.court}}</p>
+    </div>
+
+    <div>
+        <p style="text-align: left;font-size:20px">类型：{{result.documenttype}}</p>
+    </div>
+    <div>
+        <p style="text-align: left;font-size:20px">年份：{{result.year}}</p>
+    </div>
+     <div >
+       <p style="text-align: center;font-size:20px" > 信息摘要：  {{keysentences}}</p>
+    </div>
+    <div>
+        <p style="text-align: center;font-size:20px">裁判结果：{{result.referee}}</p>
+    </div>
+    <div>
+        <p style="text-align: center;font-size:20px">正文：
+            {{result.text}}</p>
+    </div>
+</div>
+<div style="text-align: center" class="col-sm-3 col-md-3">
+    <h2>
+        <a  href="http://127.0.0.1:5000/searchs/search/{{result.court}}">返回</a>
+    </h2>
+</div>
+
+<link rel="stylesheet" type="text/css" href="/static/styles.css" />
+<link rel="stylesheet" type="text/css" href="/static/colortip-1.0/colortip-1.0-jquery.css"/>
+<script type="text/javascript" src="/static/colortip-1.0/colortip-1.0-jquery.js"></script>
+<script type="text/javascript" src="/static/js/script.js"></script>
+
+</body>
+</html>

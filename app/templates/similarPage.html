@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	
+	<link rel="stylesheet" type="text/css" href="/static/css-like/style1.css">
+    <link rel="stylesheet" href="/static/css-like/reset.css" />
+	<link rel="stylesheet" href="/static/css-like/style.css" />
+	<style media="screen">
+		
+		p{font-size: 14px; margin-top: 10px;}
+		pre{background:#eee;border:1px solid #ddd;border-left:4px solid #f60;padding:15px;margin-top: 15px;}
+		h2{font-size: 20px;margin-top: 20px;}
+		.case{margin-top: 15px}
+		.ECalendar{width:400px;height:30px;}
+	</style>
+    <script>
+    
+
+    window.onbeforeunload = function(){
+
+            document.documentElement.scrollTop = 0;  //ie下
+
+            document.body.scrollTop = 0;  //非ie
+
+    }
+	</script>
+    <style>
+body:before{
+  content:'';
+  height:100%;
+  display:inline-block;
+  vertical-align:middle;
+}
+button{
+  background:#CCC;
+  color:#000;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  font-family:"Times New Roman", Times, serif;
+}
+button:hover{
+  background:#FFF;
+  color:#000;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background:#000;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+</style>
+
+</head>
+
+<body style="background-image:url(/static/img-like/186.jpg); background-size:cover" onload="load()">
+
+
+
+	<div>
+    <div align="center"><h1 style="font-size:50px; font-weight:bold; font-family:'Times New Roman', Times, serif;  color:#CCC">相似案件推荐</h1></div>
+    <HR  style="FILTER:  progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)"  width="80%" color=#CCC SIZE=2>
+    
+   &nbsp;
+   <div >
+    
+    <form action="/recomments/recomment/keyword" method="post" class="subscribe-form">
+    <table>
+    
+      
+       
+      <tr>
+      <td><p style="font-size:20px;">案件类型：</p></td>
+        <td ><div >
+            <label>   <select style="width:528px" name="document" runat="server">
+          
+                <option value="{{name}}"id="name">--请选择--</option>
+                        
+        <option value="民事裁定书" id="name">民事判定书</option>
+        <option value="民事裁定书" id="name">刑事裁定书</option>
+        <option value="执行裁定书" id="name">执行裁定书</option>
+        <option value="刑事判决书" id="name">刑事判决书</option>
+        <option value="执行裁定书" id="name">执行裁定书</option>
+        <option value="刑事附带民事判决书" id="name">刑事附带民事判决书</option>
+        
+          
+      
+      </select>
+    </label>
+      </div></td>
+      </tr>
+ 
+
+      <tr>
+      <td><p style="font-size:20px;">地区：</p></td>
+        <td><div>
+             <label>                  <select  style="width:528px" name="region" runat="server">
+       
+        <option value="{{name}}"id="name">--请选择--</option>
+        <option value="全部" id="name">全部</option>
+        <option value="贵州省" id="name">贵州省</option>
+        <option value="山西省" id="name">山西省</option>
+        <option value="湖南省" id="name">湖南省</option>
+        <option value="湖北省" id="name">湖北省</option>
+        <option value="北京市 id="name">北京市</option>
+        <option value="上海市" id="name">上海市</option>
+        <option value="河北省" id="name">河北省</option>
+        <option value="辽宁省" id="name">辽宁省</option>
+        <option value="吉林省" id="name">吉林省</option>
+        <option value="江西省" id="name">江西省</option>
+         <option value="重庆市" id="name">重庆市</option>
+        <option value="云南省" id="name">云南省</option>
+        <option value="浙江省" id="name">浙江省</option>
+        <option value="甘肃省" id="name">甘肃省</option>
+        <option value="黑龙江省" id="name">黑龙江省</option>
+        <option value="山东省" id="name">山东省</option>
+        <option value="广东省" id="name">广东省</option>
+        <option value="河南省" id="name">河南省</option>
+        <option value="西藏自治区" id="name">西藏自治区</option>
+        <option value="宁夏回族自治区" id="name">宁夏回族自治区</option>
+         <option value="内蒙古自治区" id="name">内蒙古自治区</option>
+        <option value="新疆维吾尔自治区" id="name">新疆维吾尔自治区</option>
+        <option value="广西壮族自治区" id="name">广西壮族自治区</option>
+
+      </select>
+    </label>  
+      </div></td>
+      </tr>
+    
+      </div></td>
+      </tr>
+  
+      
+      
+     
+      
+
+      
+      <tr>
+      <td height="170"><p style="font-size:20px;" >案情描述：</p></td>
+        <td><textarea name="des" runat="server" placeholder="相似案件推荐是用户输入案情描述，本系统利用相似性算法推荐频率最高的裁判文书。"></textarea></td>
+      </tr>
+      
+      
+    </table>
+    <HR  style="FILTER:  progid:DXImageTransform.Microsoft.Shadow(color:#987cb9,direction:145,strength:15)"  width="100%" color=#CCC SIZE=2>
+    <div style=" text-align:center">
+    <button type="submit">提交</button>
+    </div>
+  </form>
+    </div>
+
+    <script>
+
+        var province=document.getElementById("prov");
+        
+    
+        
+        var arr_prov=new Array(new Option("--请选择--"),new Option("民事判决书",'民事判决书'),new Option("刑事裁定书",'刑事裁定书'),new Option("执行裁定书",'执行裁定书'),new Option("行政裁定书",'行政裁定书'));
+        
+        
+        
+        function load(){ for(var i=0;i<arr_prov.length;i++){ province.options[i]=arr_prov[i]; } } //选中省份之后，根据索引动态载入相应城市 
+        function changeCity(){
+        
+        //清空上次的选项
+        
+        city.options.length=0; //获取省一级的下拉列表选中的索引
+        
+        var index=province.selectedIndex;
+        
+        }
+        
+        </script>
+        
+   <script src="js/jquery.min.js"></script>
+	<script src="js/Ecalendar.jquery.min.js"></script>
+  <script type="text/javascript" language="javascript">
+  var subcat = new Array();
+  var biglist = new Array('刑事案件', '行政案件', '刑事案件');
+  function changeselect1(locationid) {
+                        for (j = 0; j < biglist.length; j++)
+                            if (biglist[j] == locationid) {
+                                locationid = j;
+                            }
+                        document.submit_form.unitName.length = 0;//初始化下拉列表，清空下拉数据
+                        document.submit_form.unitName.options[0] = new Option('0', '所有小类');//给第一个值
+                        for (i = 0; i < subcat.length; i++) {
+                            if (subcat[i][0] == locationid) {
+                                document.submit_form.unitName.options[document.submit_form.unitName.length] = new Option(subcat[i][1], subcat[i][2]);
+                            }//建立option
+                        }
+                    }
+  
+    function selectProject() {
+        var projectName;
+        var data;
+        var username = $("#case_user").val();
+        var project = document.getElementById("project");
+        var arr_project=new Array(new Option("请选择"),new Option("民事判决书"),new Option("刑事裁定书"),new Option("执行裁定书"),new Option("行政裁定书"))
+        function load(){
+          for(var i=0;i<arr_project.length;i++){
+            project.Option[i]=arr_project.Option[i];
+          }
+        }
+        $("#module").html("");       //每次重新选择当前列表框，就清空下一级列表框。
+        for (i=0;i<project.length;i++){
+            if (project[i].selected == true){     //判断被选中项
+                projectName = project[i].text;
+                data = {
+                    'project':projectName,
+                };
+                $.ajax({                       //发起ajax请求
+                    type:'post',
+                    url:'/api/'+username+'/project_selector/',
+                    data:JSON.stringify(data),
+                    contentType:'application/json',
+                    success:function (data) {    //后端返回数据，是列表形式的
+                        if (data){
+                            for (i=0;i<data.length;i++){
+                                $("<option value='"+data[i]+"'>" + data[i] + "</option>").appendTo('#module');  //将后端返回的数据逐项插入到下一级列表框中
+                            }
+                        }
+                        else {
+                            pass;
+                        }
+                    }
+                });
+            }
+        }
+    }
+
+	</script> 
+
+	
+</body>
+
+</html>

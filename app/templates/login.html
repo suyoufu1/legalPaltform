@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" >
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content=""> -->
+		<title>后台登录</title>
+		<!-- Bootstrap core CSS          href="static.asserts\css\bootstrap.min.css"-->
+		<link  rel="stylesheet" type="text/css" href="..\static\css-log\bootstrap.min.css" >
+		<!-- Custom styles for this template    asserts/css/signin.css -->
+		<link rel="stylesheet" type="text/css" href="../static/css-log/signin.css" >
+	</head>
+	<body class="text-center">
+		<!-- action="dashboard.html" -->
+		<form class="form-signin"  method="GET" action="/login">
+			<img class="mb-4"  src="../static/img-log/bootstrap-solid.svg" alt="" width="72" height="72">
+			<h1 class="h3 mb-3 font-weight-normal" >请登录</h1>
+			<!--判断-->
+			<p style="color: red" "></p>
+			<label class="sr-only" ">用户名</label>
+			<input type="text"  name="username" class="form-control" placeholder="Username"  required="" autofocus="">
+			<label class="sr-only" >密码</label>
+			<input type="password" name="password" class="form-control" placeholder="Password" required="">
+			<div class="checkbox mb-3">
+				<label>
+          			<input type="checkbox" value="remember-me"/> 记住我
+        		</label>
+			</div>
+			<button class="btn btn-lg btn-primary btn-block" type="submit" >登录</button>
+			<p class="mt-5 mb-3 text-muted">© 2020-2021</p>
+			<a class="btn btn-sm">中文</a>
+		</form>
+	</body>
+
+</html>

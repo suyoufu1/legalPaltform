@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<!--<LINK rel="stylesheet" href="https:/cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+<LINK rel="Bookmark" href="/static/favicon.ico" >
+<LINK rel="Shortcut Icon" href="/static/favicon.ico" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/staticRes/js/html5shiv.js"></script>
+<script type="text/javascript" src="/staticRes/js/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="/static/plugin/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/plugin/Hui-iconfont/1.0.8/iconfont.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/common.css" />
+
+  
+  <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" href="/static/css/demo.css" />
+  <link rel="stylesheet" href="/static/css/templatemo-style.css">
+  <link rel="stylesheet" href="/static/css/page.css">
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script src="/static/js/jquery-2.2.3.min.js"></script>
+  <script src="/static/js/page.js"></script>
+
+  <script type="text/javascript">
+	$(function() {
+	  $("#submitBtn").click(function() {
+      $('#echoResult_load').load("/Load/" + $('input[name="echoText"]').val());
+      });
+	});
+  </script>
+
+
+  
+
+  
+		
+<!--[if lt IE 9]>
+<link href="/staticRes/lib/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } function showSide(){$('.navbar-nav').toggle();}</script>
+	
+
+</head>
+<body>
+  <div class="container-fluid" style="background-image:url(/static/img/2.jpg); background-size:cover; height:150px">
+    <header class="navbar-wrapper">
+      <div class="navbar navbar-fixed-top"></div>
+    </header>
+    
+            <div class="row cb-slideshow-text-container ">
+              <div style="margin:auto; left:0; right:0; margin-top:-20px;">
+              
+                <h1 style="font-size:50px; font-weight:bold; font-family:'Times New Roman', Times, serif; color:#FFF; ">类似案件推荐</h1>
+            
+        
+    
+                        <form action="/recomments/recomment/keyword" method="post" class="subscribe-form">
+                        
+    
+          
+                           <div class="row form-section" >
+                            <table width="90%">
+                            <tr>
+                            <td style="vertical-align:top">
+                            <div style="float:right; margin-right:15px">
+          </div></td>
+                                </tr>
+                                </table>                         
+                </div>
+                            
+                        </form>
+                        
+              
+    
+              </div>
+            </div>
+    </div> 
+  
+  <!--right-->
+  <form action="/keyword" method="post" class="subscribe-form">
+  <div class="col-sm-9 col-md-9" style="margin-left: 320px">
+   
+      
+  	<div class="slider_main"></div>
+  		
+		<div class="mt-20 bg-fff box-shadow radius mb-5">
+			<div class="tab-category" ><strong>案件 当前数量:{{num}}</strong></div>
+            <div  ><strong><a href="http://127.0.0.1:5000/recomments/recomment">返回</a> </strong></div>
+        </div>
+		<div class="art_content" style=" overflow-y:auto; overflow-x:auto;  ">
+    {% for result in result %}
+			<ul class="index_arc" >
+                    
+                   
+				<li class="index_arc_item no_pic" style="height:auto">
+               <div>
+                 <h4 class="title" style="font-size:15px">
+                  <a id="echoResult_title" href="{{ url_for('searchs.title',title=result.title) }}">
+                    {{result.title}}
+                  </a>
+                </div>
+
+                </br>
+              <div>
+					<div class="date_hits" >
+                        <span>{{result.documenttype}}</span>
+                        <span></span>
+                        <span>{{result.court}}</span>
+
+                     
+                    </div>
+                    <div class="date_hits" >
+                    {{result.information_people}}<br>
+                    
+                    
+                    </div>
+                                 
+                </li>
+                
+
+                
+          </ul>
+          {% endfor %}
+         
+        </div>
+        <div style="text-align: center"></div>
+        
+  </div> 
+  </form>
+</section>
+<footer class="footer mt-20"></footer>
+<script type="text/javascript" src="/static/plugin/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/plugin/layer/3.0/layer.js"></script>
+<script type="text/javascript" src="/static/plugin/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
+<script> $(function(){ $(window).on("scroll",backToTopFun); backToTopFun(); }); </script>
+<script type="text/javascript" src="/static/plugin/jquery.SuperSlide/2.1.1/jquery.SuperSlide.min.js"></script>
+
+<script>
+
+
+</script> 
+
+</body>
+</html>

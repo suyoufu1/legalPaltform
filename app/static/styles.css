@@ -1,0 +1,65 @@
+/* 
+ *	These styles are needed for the styling of the demo page.
+ *	You only need the colortip-1.0-jquery.css stylesheet to display
+ *	the colorful tooltips on your site.
+ */
+
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-size:13px;
+	color:#777;
+	background-color:#f6f8f9;
+	font-family:Arial, Helvetica, sans-serif;
+	text-shadow:1px 1px 0 white;
+}
+
+h1{
+	color:#6f9e1d;
+	font-size:40px;
+}
+
+h2{
+	font-size:22px;
+	font-style:italic;
+	font-weight:normal;
+	color:#515151;
+}
+
+h1,h2{
+	font-family:'Myriad Pro',Arial, Helvetica, sans-serif;
+	margin:30px 0;
+}
+
+p{
+	padding-bottom:15px;
+	line-height:1.5;
+	text-align:justify;
+}
+
+#page{
+	/* This the main container div */
+	width:900px;
+	margin:0 auto;
+	position:relative;
+	padding-top:1px;
+}
+
+h2.backToTz{
+	position:absolute;
+	right:0;
+	top:52px;
+	white-space:nowrap;
+}
+
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	color:#159ce9;
+}
+
+a:hover{	text-decoration:underline;}
+a img{	border:none;}

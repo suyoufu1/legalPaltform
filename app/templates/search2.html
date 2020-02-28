@@ -1,0 +1,360 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<!--<LINK rel="stylesheet" href="https:/cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/staticRes/js/html5shiv.js"></script>
+<script type="text/javascript" src="/staticRes/js/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="../static/plugin/h-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='plugin/h-ui/css/H-ui.min.css')}}">
+<link rel="stylesheet" type="text/css" href="../static/plugin/Hui-iconfont/1.0.8/iconfont.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='plugin/Hui-iconfont/1.0.8/iconfont.min.css')}}">
+<link rel="stylesheet" type="text/css" href="../static/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/common.css')}}">
+
+  
+  <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+  <link rel="stylesheet"  href="{{url_for('static',filename='css/font-awesome.min.css')}}">
+  <link rel="stylesheet" href="../static/css/demo.css" />
+    <link rel="stylesheet" href="{{url_for('static',filename='css/demo.css')}}">
+  <link rel="stylesheet" href="../static/css/templatemo-style.css">
+    <link rel="stylesheet"  href="{{url_for('static',filename='css/templatemo-style.css')}}">
+  <link rel="stylesheet" href="../static/css/page.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/page.css')}}">
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script src="../static/js/jquery-2.2.3.min.js"></script>
+    <script  src="{{url_for('static',filename='js/jquery-2.2.3.min.js')}}"></script>
+  <script src="../static/js/page.js"></script>
+    <script  src="{{url_for('static',filename='js/page.js')}}"></script>
+  <script type="text/javascript">
+	$(function() {
+	  $("#submitBtn").click(function() {
+      $('#echoResult_load').load("/Load/" + $('input[name="echoText"]').val());
+      });
+	});
+  </script>
+
+
+  
+
+  
+		
+<!--[if lt IE 9]>
+<link href="/staticRes/lib/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } function showSide(){$('.navbar-nav').toggle();}</script>
+<style type="text/css">
+    .nui-scroll:hover::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, .2);
+        border-radius: 10px;
+        -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1);
+    }
+</style>
+{% import 'pages.html' as pg %}
+</head>
+<body>
+
+<!--../static/img/2.jpg-->
+
+<div class="container-fluid" style="background-image:url({{url_for('static',filename='img/2.jpg')}}); background-size:cover; height:200px;">
+<header class="navbar-wrapper">
+  <div class="navbar navbar-fixed-top"></div>
+</header>
+
+				<div class="row cb-slideshow-text-container ">
+					<div style="margin:auto; left:0; right:0; margin-top:-20px;">
+					
+					  <h1 style="font-size:55px; font-weight:bold; font-family:'Times New Roman', Times, serif; color:rgb(231, 229, 229); ">法律要素检索</h1>
+					<P class="mb-5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+		
+
+                    <form action="/searchs/search/keyword" method="post" class="subscribe-form">
+                    
+
+      
+               	    	<div class="row form-section">
+                        <table width="90%">
+                        <tr>
+                        <td style="vertical-align:top">
+                        <div style="float:right; margin-right:15px">
+
+                                 <select style="height:auto;font-family:'Times New Roman', Times, serif" class="form-control"  >
+        <option value="" id="">检索条目</option>
+        <option value="0" >案情特征词</option>
+        <option value="1">案件类型</option>
+        <option value="2">地区</option>
+        <option value="3">法院</option>
+      </select>
+
+      </div></td>
+        
+                                             					
+   
+
+							<td width="500px" style="vertical-align:top"><div>
+                     
+       
+                     
+		                      <input onkeypress="if(event.keyCode==13) {submitBtn.click();return false;}" style="width:400px;font-family:'Times New Roman', Times, serif"  class="form-control"  name="keyword" placeholder="请输入左侧对应检索项的相应检索信息" >
+<!--                                   <div>-->
+<!--                                   <input type="radio" name="check" value="site" id="searchSite" checked />-->
+<!--                                 <label style="font-size:18px;  font-family:'Times New Roman', Times, serif; color:#FFF">刑事&nbsp;</label>-->
+<!--                                   <input type="radio" name="check" value="site" id="searchSite" />-->
+<!--                                 <label style="font-size:18px;  font-family:'Times New Roman', Times, serif; color:#FFF">行政&nbsp;</label>-->
+<!--                                   <input type="radio" name="check" value="site" id="searchSite" checked />-->
+<!--                                 <label style="font-size:18px; font-family:'Times New Roman', Times, serif;color:#FFF">民商事&nbsp;</label>-->
+
+
+<!--                                  </div>-->
+
+				  			</div></td>
+                            
+							<td style="vertical-align:top"><div style=" margin-left:10px">
+								<button type="submit" class="tm-btn-subscribe" style="font-family:'Times New Roman', Times, serif">检索</button>
+							</div></td>
+                            </tr>
+                            </table>                         
+                            
+                            
+						
+						</div>
+                        
+                    </form>
+                    
+					
+
+					</div>
+				</div>
+</div> 
+
+<section class="container pt-20" style="width: 2200px">
+	<!--<div class="Huialert Huialert-info"><i class="Hui-iconfont">&#xe6a6;</i>成功状态提示</div>-->
+  <!--left-->
+  <span class="index_arc_item"></a></span>
+  <div style="margin-top:20px"class="col-sm-3 col-md-3">
+<!--      &lt;!&ndash;法院&ndash;&gt;-->
+<!--      <div class="tab-category" >-->
+<!--          <a href=""><strong>法院</strong></a>-->
+<!--      </div>-->
+<!--  	<div class="bg-fff box-shadow radius mb-20" style=" overflow-y:auto; overflow-x:auto; width:300px; height:220px;">-->
+
+<!--			<div class="tab-category-item">-->
+
+<!--                    {% for court in court%}-->
+<!--				<ul class="index_recd">-->
+
+<!--					<li>-->
+<!--						<a href="{{ url_for('searchs.court',court=court.court) }}">{{court.court}}</a>-->
+<!--						<p class="hits"><i class="Hui-iconfont" title="点击量"></i>{{court.items}}</p>-->
+<!--					</li>-->
+<!--                </ul>-->
+<!--                {% endfor %}-->
+<!--                <ul class="index_recd clickTop">-->
+<!--                    <li><a href="{{ url_for('searchs.court',court='山西') }}"><span>山西省法院</span></a></li>-->
+<!--                    <li><a href="{{ url_for('searchs.court',court='贵州') }}"><span>贵州省法院</span></a></li>-->
+<!--                    <li><a href="{{ url_for('searchs.court',court='湖南') }}"><span>湖南省法院</span></a></li>-->
+<!--                    <li><a href="{{ url_for('searchs.court',court='湖北') }}"><span>湖北省法院</span></a></li>-->
+<!--                    <li><a href="{{ url_for('searchs.court',court='北京') }}"><span>北京市法院</span></a></li>-->
+<!--                    <li><a href="{{ url_for('searchs.court',court='上海') }}"><span>上海市法院</span></a></li>-->
+<!--                    <li><a href="{{ url_for('searchs.court',court='河北') }}"><span>河北省法院</span></a></li>-->
+<!--                    <li><a href="{{ url_for('searchs.court',court='辽宁') }}"><span>辽宁省法院</span></a></li>-->
+<!--                    <li><a href="{{ url_for('searchs.court',court='吉林') }}"><span>吉林省法院</span></a></li>-->
+<!--                    <li><a href="{{ url_for('searchs.court',court='江西') }}"><span>江西省法院</span></a></li>-->
+<!--                    <li><a href="{{ url_for('searchs.court',court='重庆') }}"><span>重庆市法院</span></a></li>-->
+<!--                    <li><a href="{{ url_for('searchs.court',court='云南') }}"><span>云南省法院</span></a></li>-->
+<!--                    <li><a href="{{ url_for('searchs.court',court='浙江') }}"><span>浙江省法院</span></a></li>-->
+<!--                    <li><a href="{{ url_for('searchs.court',court='湖南') }}"><span>甘肃省法院</span></a></li>-->
+<!--                    <li><a href="{{ url_for('searchs.court',court='黑龙江') }}"><span>黑龙江省法院</span></a></li>-->
+<!--                    <li><a href="{{ url_for('searchs.court',court='山东') }}"><span>山东省法院</span></a></li>-->
+<!--                    <li><a href="{{ url_for('searchs.court',court='广东') }}"><span>广东省法院</span></a></li>-->
+<!--                    <li><a href="{{ url_for('searchs.court',court='河南') }}"><span>河南省法院</span></a></li>-->
+<!--                    <li><a href="{{ url_for('searchs.court',court='西藏') }}"><span>西藏自治区法院</span></a></li>-->
+<!--                    <li><a href="{{ url_for('searchs.court',court='内蒙古') }}"><span>内蒙古自治区法院</span></a></li>-->
+<!--                    <li><a href="{{ url_for('searchs.court',court='新疆' ) }}"><span>新疆维吾尔自治区法院</span></a></li>-->
+<!--                    <li><a href="{{ url_for('searchs.court',court='宁夏') }}"><span>宁夏回族自治区法院</span></a></li>-->
+<!--                    <li><a href="{{ url_for('searchs.court',court='广西') }}"><span>广西壮族自治区法院</span></a></li>-->
+<!--                </ul>-->
+<!--			</div>-->
+<!--    </div>-->
+      <!--案件类型-->
+      <div class="tab-category">
+          <a href=""><strong>案件类型</strong></a>
+      </div>
+      <div class="bg-fff box-shadow radius mb-20" style=" overflow-y:auto; overflow-x:auto; width:300px; height:200px;">
+
+          <div class="tab-category-item">
+<!--              {% for documenttype in documenttype%}-->
+<!--              <ul class="index_recd clickTop">-->
+<!--                  <li>-->
+<!--                      <a href="{{ url_for('searchs.court',court=documenttype.documenttype) }}">{{documenttype.documenttype}}</a>-->
+<!--                  </li>-->
+<!--              </ul>-->
+<!--              {% endfor %}-->
+              <ul class="index_recd">
+                    <li><a  href="{{ url_for('searchs.court',court='裁定书') }}">  刑事裁定书</a></li>
+                    <li><a  href="{{ url_for('searchs.court',court='民事') }}"><span>   民事判决书</span></a></li>
+                    <li><a  href="{{ url_for('searchs.court',court='决定书') }}"><span>   刑事判决书</span></a></li>
+                    <li><a  href="{{ url_for('searchs.court',court='执行') }}"><span>   执行裁定书</span></a></li>
+                    <li><a  href="{{ url_for('searchs.court',court='刑事附带民事') }}"><span>   刑事附带民事判决书</span></a></li>
+                </ul>
+          </div>
+      </div>
+
+        <!--地域-->
+      <div class="tab-category">
+          <div class="tab-category" ><strong>地域及法院</strong></div>
+      </div>
+        <div class="bg-fff box-shadow radius mb-20" style=" overflow-y:auto; overflow-x:auto; width:300px; height:230px;">
+
+            <div class="tab-category-item">
+<!--                    {% for region in region%}-->
+<!--                <ul class="index_recd clickTop">-->
+<!--                    <li>-->
+<!--                        <a href="{{ url_for('searchs.court',court=region.region) }}">{{region.region}}</a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--                {% endfor %}-->
+
+                <ul class="index_recd clickTop">
+                    <li><a href="{{ url_for('searchs.court',court='山西') }}"><span>山西省</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='贵州') }}"><span>贵州省</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='湖南') }}"><span>湖南省</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='湖北') }}"><span>湖北省</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='北京') }}"><span>北京市</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='上海') }}"><span>上海市</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='河北') }}"><span>河北省</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='辽宁') }}"><span>辽宁省</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='吉林') }}"><span>吉林省</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='江西') }}"><span>江西省</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='重庆') }}"><span>重庆市</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='云南') }}"><span>云南省</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='浙江') }}"><span>浙江省</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='湖南') }}"><span>甘肃省</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='黑龙江') }}"><span>黑龙江省</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='山东') }}"><span>山东省</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='广东') }}"><span>广东省</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='河南') }}"><span>河南省</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='西藏自') }}"><span>西藏自治区</span></a></li>
+                      <li><a href="{{ url_for('searchs.court',court='内蒙古') }}"><span>内蒙古自治区</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='新疆维' ) }}"><span>新疆维吾尔自治区</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='宁夏') }}"><span>宁夏回族自治区</span></a></li>
+                     <li><a href="{{ url_for('searchs.court',court='广西') }}"><span>广西壮族自治区</span></a></li>
+                </ul>
+            </div>
+        </div>
+        </form>
+
+      <div class="tab-category" >
+          <a href=""><strong>裁判年份</strong><span></span></a>
+      </div>
+        <div class="bg-fff box-shadow radius mb-20" style=" overflow-y:auto; overflow-x:auto; width:300px; height:165px;">
+
+            <div class="tab-category-item" >
+                 <!--   {% for year in year%}
+                <ul class="index_recd clickTop">
+                    <li>
+                        <a href="{{ url_for('searchs.court',court=year.year) }}">{{year.year}}</a>
+                    </li>
+                </ul>
+                {% endfor %}-->
+              <ul class="index_recd clickTop">
+                <li><a href="{{ url_for('searchs.court',court='2018') }}"><span>2018</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='2017') }}"><span>2017</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='2016') }}"><span>2016</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='2015') }}"><span>2015</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='2014') }}"><span>2014</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='2013') }}"><span>2013</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='2012') }}"><span>2012</span></a></li>
+                    <li><a href="{{ url_for('searchs.court',court='2011') }}"><span>2011</span></a></li>
+              </ul>
+            </div>
+        </div>
+
+        
+		
+		</div>
+  
+  
+  <!--right-->
+
+  <div class="col-sm-9 col-md-9">
+      <!--滚动图-->
+      
+  	<div class="slider_main"></div>
+  		
+		<div class="mt-20 bg-fff box-shadow radius mb-5" >
+			<div class="tab-category" ><strong>案例 当前数量:{{num}}</strong> </div>
+        </div>
+		<div class="art_content" style=" overflow-y:auto; overflow-x:auto; width:1500px; height:800px;">
+            {{ pg.page(page_data,"court") }}
+                {% for result in result %}
+			<ul class="index_arc" >
+
+
+				<li class="index_arc_item no_pic" style="height:auto">
+                    <div><h4 class="title" style="font-size:15px"><a id="echoResult_title" href="{{ url_for('searchs.title',title=result.title) }}">{{result.title}}</a>
+                        </h4>
+                    </div>
+                  
+
+                </br>
+                  <div>
+					<div class="date_hits" >
+                        <span>{{result.documenttype}}</span>
+                        <span>{{result.year}}</span>
+                        <span>{{result.court}}</span>
+                    </div>
+                    <!-- <div class="date_hits" >
+                    {{result.information_people}}
+                    </div> -->
+                                 
+                </li>
+                
+
+                
+          </ul>
+          {% endfor %}
+
+        </div>
+        <div style="text-align: center"></div>
+        
+  </div> 
+  </form>
+</section>
+<!--<footer class="footer mt-20"></footer>-->
+<script type="text/javascript" src="../static/plugin/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../static/plugin/layer/3.0/layer.js"></script>
+<script type="text/javascript" src="../static/plugin/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="../static/js/common.js"></script>
+<script> $(function(){ $(window).on("scroll",backToTopFun); backToTopFun(); }); </script>
+<script type="text/javascript" src="../static/plugin/jquery.SuperSlide/2.1.1/jquery.SuperSlide.min.js"></script>
+
+<script>
+$(function(){
+//幻灯片
+jQuery(".slider_main .slider").slide({mainCell: ".bd ul", titCell: ".hd li", trigger: "mouseover", effect: "leftLoop", autoPlay: true, delayTime: 700, interTime: 2000, pnLoop: true, titOnClassName: "active"})
+//tips
+jQuery(".slideTxtBox").slide({titCell: ".hd ul", mainCell: ".bd ul", autoPage: true, effect: "top", autoPlay: true});
+//标签
+	$(".tags a").each(function(){
+		var x = 9;
+		var y = 0;
+		var rand = parseInt(Math.random() * (x - y + 1) + y);
+		$(this).addClass("tags"+rand)
+	});
+	
+	$("img.lazyload").lazyload({failurelimit : 3});
+});
+
+</script> 
+
+</body>
+</html>

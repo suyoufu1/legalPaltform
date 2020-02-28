@@ -1,0 +1,121 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+	
+    <link rel="stylesheet" type="text/css" href="/static/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="/static/font/iconfont.css">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+
+    <link rel="stylesheet" href="/static/css/style.css" media="screen" type="text/css" />
+
+    <script src="/static/js/modernizr.js"></script>
+	
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/nav.js"></script>
+
+    <script type="text/javascript" src="/static/jQuery.js"></script>
+    
+	
+</head>
+<body>
+    <div class="nav" style="float:left">
+        <div class="nav-top">
+            <div  style="border-bottom:1px solid rgba(255,255,255,.1)"><p style="font-size:23px; margin-left:16px; color:#FFF; font-family:'Courier New', Courier, monospace">法律案情统计分析</p></div>
+        </div>
+        <ul>
+            
+            <li class="nav-item">
+                <a href="http://47.106.183.183:80/法律案情统计分析"><i class="my-icon nav-icon icon_1"></i><span>以涉案人员关键字进行统计</span></a>
+            
+            <ul>
+
+                </ul>
+                </li>
+            <!-- <li class="nav-item" >
+                <a href="javascript:;"><i class="my-icon nav-icon icon_2"></i><span>以案件类型进行统计</span><i class="my-icon nav-more"></i></a>
+                {% for document_Type in document_Type%}
+                <ul>
+                    <li><a  href="{{ url_for('DT',DT=document_Type.document_Type) }}"></span>{{document_Type.document_Type}}</span></a></li>
+                </ul>
+                {% endfor %}
+            </li>
+             -->
+             <li class="nav-item">
+                <a href="javascript:;"><i class="my-icon nav-icon icon_2"></i><span>以案件类型进行统计</span><i class="my-icon nav-more"></i></a>
+                <ul>
+                    <li><a  href="{{ url_for('statistics.DT',DT='刑事裁定书') }}"></span>   刑事裁定书</span></a></li>
+                    <li><a  href="{{ url_for('statistics.DT',DT='民事判决书') }}"></span>   民事判决书</span></a></li>
+                    <li><a  href="{{ url_for('statistics.DT',DT='刑事决定书') }}"></span>   刑事判决书</span></a></li>
+                    <li><a  href="{{ url_for('statistics.DT',DT='执行裁定书') }}"></span>   执行裁定书</span></a></li>
+                </ul>
+                
+            </li>
+            <!-- <li class="nav-item" >
+                <a href="javascript:;"><i class="my-icon nav-icon icon_3"></i><span>以地区进行统计</span><i class="my-icon nav-more"></i></a>
+                {% for region in region[0:10]%}
+                <ul>
+                    <li><a href="{{ url_for('region',region=region.region) }}"><span>{{region.region}}</span></a></li>
+                </ul>
+                {% endfor %}
+            </li> -->
+
+            <li class="nav-item">
+                <a href="javascript:;"><i class="my-icon nav-icon icon_3"></i><span>以地区进行统计</span><i class="my-icon nav-more"></i></a>
+                
+                <!--<ul>
+                    <li><a href="{{ url_for('statistics.region',region='山西省') }}"><span>山西</span></a></li>
+                    <li><a href="{{ url_for('statistics.region',region='贵州省') }}"><span>贵州</span></a></li>
+                    <li><a href="{{ url_for('statistics.region',region='湖南省') }}"><span>湖南</span></a></li>
+                    <li><a href="{{ url_for('statistics.region',region='新疆维' ) }}"><span>新疆</span></a></li>
+                    <li><a href="{{ url_for('statistics.region',region='湖北省') }}"><span>湖北</span></a></li>
+                    <li><a href="{{ url_for('statistics.region',region='北京市') }}"><span>北京</span></a></li>
+                    <li><a href="{{ url_for('statistics.region',region='河北省') }}"><span>河北</span></a></li>
+                    <li><a href="{{ url_for('statistics.region',region='辽宁省') }}"><span>辽宁</span></a></li>
+                    <li><a href="{{ url_for('statistics.region',region='吉林省') }}"><span>吉林</span></a></li>
+                    <li><a href="{{ url_for('statistics.region',region='江西省') }}"><span>江西</span></a></li>
+                    <li><a href="{{ url_for('statistics.region',region='重庆市') }}"><span>重庆</span></a></li>
+                    <li><a href="{{ url_for('statistics.region',region='云南省') }}"><span>云南</span></a></li>
+                    <li><a href="{{ url_for('statistics.region',region='西藏自') }}"><span>西藏</span></a></li>
+                    <li><a href="{{ url_for('statistics.region',region='浙江省') }}"><span>浙江</span></a></li>
+                    <li><a href="{{ url_for('statistics.region',region='湖南省') }}"><span>甘肃</span></a></li>
+                    <li><a href="{{ url_for('statistics.region',region='内蒙古') }}"><span>内蒙古</span></a></li>
+                    <li><a href="{{ url_for('statistics.region',region='黑龙江') }}"><span>黑龙江</span></a></li>
+                    <li><a href="{{ url_for('statistics.region',region='山东省') }}"><span>山东</span></a></li>
+                    <li><a href="{{ url_for('statistics.region',region='河北省') }}"><span>河北</span></a></li>
+                    <li><a href="{{ url_for('statistics.region',region='河南省') }}"><span>河南</span></a></li>
+                    <li><a href="{{ url_for('statistics.region',region='宁夏回') }}"><span>宁夏</span></a></li>
+                </ul>-->
+                
+            </li>
+          
+            <li class="nav-item">
+                <a href="javascript:;"><i class="my-icon nav-icon icon_3"></i><span>以法院进行统计</span><i class="my-icon nav-more"></i></a>
+                {% for court in court[0:10]%}
+                <ul>
+                    <li><a href="{{ url_for('court2',court2=court.court) }}"><span>{{court.court}}</span></a></li>
+                </ul>
+                {% endfor %}
+            </li>
+        </ul>
+    </div>
+    <div style="float:right; background-color:#FFF; width:86%; height:100%">
+        <div style="  margin-top: 0px width:86%; height:7.6%; background-color:#263238; text-align:center">
+        </br>
+            
+            <form class="search" action="/法律案情统计分析/涉案人员统计" method="post">
+                    <input onkeypress="if(event.keyCode==13) {submitBtn.click();return false;}" name="keyword1" placeholder="输入涉案人员进行统计">
+                    <button type="submit">统计</button>
+                </form>
+            </div>
+            <div style="width:86%;height:80%; margin-left:90px;margin-top:50px">
+                <img src="{{ url_for('static', filename= '统计/统计.jpg',_t=val1) }}" width="1500" height="800"/>          
+            </div>
+        
+    </div>
+    
+</body>
+</html>
+
+

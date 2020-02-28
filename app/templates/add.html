@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户管理</title>
+    <script type="text/javascript">
+        function $(eleStr){
+            switch(eleStr.substr(0,1)){
+                case "#":
+                    return document.getElementById(eleStr.substr(1));
+                    break;
+                case ".":
+                    return document.getElementsByClassName(eleStr.substr(1));
+                    break;
+                case "_":
+                    return document.getElementsByName(eleStr.substr(1));
+                    break;
+                default:
+                    return document.getElementsByTagName(eleStr);
+                    break;
+            }
+        }
+
+        onload = function(){
+
+            doOperator();
+        }
+
+        function doOperator(){
+
+            var updates =$(".update");
+            var dels =$(".del");
+            for (var i = 0; i < dels.length; i++) {
+                dels[i].onclick =   function(){
+                    if(confirm("是否确定删除？")){  //提示是否删除
+                        //var row = this.parentNode.parentNode; //取到tr对象
+                        //row.parentNode.removeChild(row);  //移除tr
+                        $("#user_gl").deleteRow(this.parentNode.parentNode.rowIndex);
+                    }
+                }
+                updates[i].onclick = function(){
+                    var operatorCell = this.parentNode.parentNode.getElementsByTagName("td")[0]; //取到要操作的td对象
+                    //1.修改按钮上有两个功能：修改，确定修改
+                    if(this.value == "修改"){
+                        this.value = "确定";
+                        operatorCell.innerHTML ="<input value='"+operatorCell.innerHTML+"'/>";//把内容变成文本框
+                        //做修改操作
+                    }else{
+                        operatorCell.innerHTML =operatorCell.getElementsByTagName("input")[0].value;//把文本框变成内容
+                        this.value = "修改";
+                        //做确定修改
+                    }
+                }
+            }
+        }
+        function addRow(){
+            var rs = $("#user_gl").rows;  //table取到所有的行
+            var insertR = $("#user_gl").insertRow(rs.length-1); //给表格添加一行(不包单元格)
+            //insertR.innerHTML = rs[1].innerHTML;
+            var c1 = insertR.insertCell(0);
+            id = prompt("请输入id", "");
+            c1.innerHTML = id;
+            var c2 = insertR.insertCell(1);
+            name = prompt("请输入用户名", "");
+            c2.innerHTML = name;
+            var c3 = insertR.insertCell(2);
+            password = prompt("请密码", "");
+            c3.innerHTML = password;
+            var c4 = insertR.insertCell(3);
+            c4.innerHTML ='<input type="button" value="删除" class="del"/><input type="button" value="修改" class="update"/>';
+            doOperator();
+
+            var cs = rs[1].cells; //取到当前行的所有单元格
+            //alert(cs[1].innerHTML);
+        }
+    </script>
+</head>
+<style>
+    body{
+        background-color: #d4d4d4
+    }
+    table, th, td {
+        border: solid 1px #979090;
+    }
+    table {
+        width: 100%;
+        margin: auto;
+        border-collapse: collapse;
+        text-align: center;
+        border-radius: 6px;
+    }
+    td,th{
+        padding: 10px;
+    }
+    a {
+        text-decoration-line: none;
+        color: green;
+    }
+    a:hover {
+        color: brown;
+        text-decoration-line: underline;
+    }
+    tr:first-child {
+        background-color: #979090;
+        border-radius: 4px 4px 0 0;
+        border-bottom: solid 1px #979090;
+    }
+    table caption {
+        font-size: 1.5rem;
+        font-weight: bolder;
+        margin-bottom: 20px;
+    }
+    p {
+        text-align: center;
+    }
+    /*首页样式*/
+    p a:first-child {
+        width: 56px;
+    }
+    p a:last-child {
+        width: 56px;
+    }
+    p a {
+        display: inline-block;
+        width: 28px;
+        height: 24px;
+        border: 1px solid rgb(59, 116, 182);
+        margin-left:2px;
+        line-height: 24px;
+    }
+    /*当前页样式*/
+    .active {
+        background-color: green;
+        color: #979090;
+    }
+    .more {
+        border: none;
+
+    }
+</style>
+<body>
+
+    <form action="/后台管理/commit" method="post" >
+        <h3>新增管理员</h3>
+        id<br>
+        <input type="text" id="id"><br>
+        username<br>
+        <input type="text" username="username">
+        <br>
+        password<br>
+        <input type="password" password="password">
+        <br>
+        <input type="submit" value="submit">
+    </form>
+
+</body>
+</html>

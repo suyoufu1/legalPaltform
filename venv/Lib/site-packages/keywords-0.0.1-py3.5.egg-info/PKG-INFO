@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: keywords
+Version: 0.0.1
+Summary: This is a simple library for extracting keywords from data with/without using a corpus.
+Home-page: https://github.com/asshatter/keyword-extract
+Author: Ankush Bhatia
+Author-email: ankushbhatia02@gmail.com
+License: MIT License
+Download-URL: https://github.com/asshatter/keyword-extract/tarball/0.0.1
+Description: UNKNOWN
+Platform: UNKNOWN

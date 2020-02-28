@@ -1,0 +1,74 @@
+.pager-list {
+    float: right;
+    position: relative;
+    font-size: 10pt;
+}
+ 
+    .pager-list > .pager {
+        display: block;
+        position: relative;
+    }
+ 
+    .pager-list ul li {
+        list-style: none;
+        float: left;
+        margin: 0 3px;
+        min-width: 37px;
+    }
+ 
+        .pager-list ul li.next,
+        .pager-list ul li.prev {
+            width: auto;
+        }
+ 
+        .pager-list ul li.disable a {
+            color: #848c94;
+        }
+ 
+        .pager-list ul li.text {
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: 0px;
+            color: black;
+            border-radius: 2px;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+        }
+ 
+            .pager-list ul li.text input.go {
+                width: 25px;
+            }
+            .pager-list ul li.text select.go {
+                padding:2px 2px;
+            }
+            .pager-list ul li.text span.go {
+                color: #848c94;
+                margin-left: 2px;
+                cursor: pointer;
+                background-color: silver;
+                padding: 4px;
+                border-radius: 2px;
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+            }
+ 
+        .pager-list ul li a {
+            display: block;
+            /*width: 24px;*/
+            padding: 0 7px;
+            height: 26px;
+            line-height: 26px;
+            text-align: center;
+            border: 1px solid #848c94;
+            color: black;
+            border-radius: 2px;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+        }
+ 
+            .pager-list ul li a:hover,
+            .pager-list ul li.active a {
+                background-color: #b2d1d8;
+            }

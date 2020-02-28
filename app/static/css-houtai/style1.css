@@ -1,0 +1,38 @@
+﻿/****************************************************************
+ *																*		
+ * 						      素材火							*
+ *                        www.sucaihuo.com							*
+ *       		  努力创建完善、持续更新插件以及模板			*
+ * 																*
+****************************************************************/
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}body,button,input,select,textarea{font-size:12px;  line-height:1.5em;}h1,h2,h3,h4,h5,h6{font-size:100%;}address,cite,dfn,em,var{font-style:normal;}code,kbd,pre,samp{font-family:courier new,courier,monospace;}small{font-size:12px;}ul,ol{list-style:none;}a{text-decoration:none; color:#03329c;}a:hover{text-decoration:underline; color:#cc0000;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}legend{color:#000;}fieldset,img{border:0;}button,input,select,textarea{font-size:100%;}table{border-collapse:collapse;border-spacing:0;}
+body{background: #656969  center top no-repeat;clear: both;margin: 0 auto;width: 100%;min-width: 960px;}
+.main{ margin:0 auto; width:960px; overflow:hidden;}
+.mainin{ margin:0 auto; width:381px; overflow:hidden; clear:both; padding-top:109px;}
+.mainin h1{ float:left; width:100%; height:22px; text-align:center; padding-bottom:22px;}
+.mainin h1 img{ width:196px; height:22px;}
+.mainin1{ float:left; width:381px; height:324px; background:url(../images/hj.png) no-repeat;}
+.mainin1 ul{ float:left; padding:25px 25px 0px; overflow:hidden; width:331px;}
+.mainin1 ul li{ float:left; width:100%; overflow:hidden; padding-bottom:25px;}
+.mainin1 ul li span, .mainin1 ul li input{ float:left;}
+.mainin1 ul li span{ width:100%; clear:both; color:#6f6f6f; font-family:"Microsoft YaHei"; font-size:14px; line-height:37px;}
+.SearchKeyword {border:1px solid #c8c8c8;width: 202px;color: #999;font-size:12px; line-height:35px; background:url(../images/srbg.png) no-repeat; height:35px; width:317px; padding-left:10px;}
+.SearchKeyword2 {border:1px solid #c8c8c8;width: 202px;color: #999;font-size:12px; line-height:35px; background:url(../images/srbg.png) no-repeat; height:35px; width:317px; padding-left:10px;}
+@media screen and (-webkit-min-device-pixel-ratio:0){.SearchKeyword2 {border:1px solid #c8c8c8;width: 202px;color: #999;line-height:35px; background:url(../images/srbg.png) no-repeat; height:35px; width:317px; padding-left:10px;}}
+.SearchKeywordonFocus, .SearchKeywordonFocus2{border:1px solid #3c9ae9;width: 202px;line-height:35px;color: #333;font-size:14px; background:url(../images/srbg2.png) no-repeat; height:35px; width:317px; padding-left:10px;}
+.SearchKeywordonFocus2{}
+@media screen and (-webkit-min-device-pixel-ratio:0){.SearchKeywordonFocus2{ font-size:25px;}}
+.tijiao{ float:left; margin:13px 0px 0px 70px; height:42px; width:190px; background:none; border:none; background:url(../images/dl.png) no-repeat; font-weight:bold; text-align:center; color:#fff; font-size:20px;font-family:"Microsoft YaHei"; cursor:pointer;}
+.footpage{ float:left; padding-top:30px; width:100%; text-align:center; line-height:20px; color:#fff;  font-family:"Microsoft YaHei";}
+.footpage a{ color:#fff}
+
+
+
+.cssPOPLoading{background:#fefefe; border:1px solid #EEE; width:400px; height:150px;  position:absolute;color:#333;z-index: 10003; text-align:center;display:none;}
+.cssPOPLoading a{ cursor:pointer; color:#333;}
+.cssPOPLoading a:hover{ cursor:pointer; color:#f00;}
+.showMessge{ width:100%; text-align:center; line-height:110px; letter-spacing:1px;}
+
+.cssModify{}
+.cssModify a{font-size:12px;color:#ccc; letter-spacing:1px;}
+.cssModify a:hover{color:#333;}

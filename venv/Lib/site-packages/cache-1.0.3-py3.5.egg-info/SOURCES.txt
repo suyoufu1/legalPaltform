@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+src/cache/__init__.py
+src/cache/version.py
+src/cache.egg-info/PKG-INFO
+src/cache.egg-info/SOURCES.txt
+src/cache.egg-info/dependency_links.txt
+src/cache.egg-info/top_level.txt

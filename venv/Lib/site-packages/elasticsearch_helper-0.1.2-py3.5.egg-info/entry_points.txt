@@ -1,0 +1,4 @@
+[console_scripts]
+es_del_index = elasticsearch_helper.cmd:del_index
+es_stream = elasticsearch_helper.cmd:stream
+

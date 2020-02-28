@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: cache
+Version: 1.0.3
+Summary: caching for humans
+Home-page: https://github.com/jayferd/python-cache
+Author: Jay Adkisson
+Author-email: j4yferd at gmail dot com (humans only, please)
+License: MIT
+Description: UNKNOWN
+Keywords: cache decorator humans
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Database :: Front-Ends
+Classifier: License :: OSI Approved :: MIT License

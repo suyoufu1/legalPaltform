@@ -1,0 +1,113 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+	
+    <link rel="stylesheet" type="text/css" href="../static/css/nav.css">
+     <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/nav.css')}}">
+
+    <link rel="stylesheet" type="text/css" href="../static/font/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='font/iconfont.css')}}">
+    <link rel="stylesheet" href="../static/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/normalize.css')}}">
+    <link rel="stylesheet" href="../static/css/style.css" media="screen" type="text/css" />
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+    <script src="../static/js/modernizr.js"></script>
+	<script  src="{{url_for('static',filename='js/modernizr.js')}}">
+    <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    <script type="text/javascript"  src="{{url_for('static',filename='js/jquery.min.js')}}">
+    <script type="text/javascript" src="../static/js/nav.js"></script>
+<script type="text/javascript"  src="{{url_for('static',filename='js/nav.js')}}">
+    <script type="text/javascript" src="../static/jQuery.js"></script>
+    <script type="text/javascript"  src="{{url_for('static',filename='jQuery.js')}}">
+    <script $("#img_id").attr("src","../static/keyword/china.jpg");></script>
+
+    
+	
+</head>
+<body>
+    <div class="nav" style="float:left">
+        <div class="nav-top">
+            <div  style="border-bottom:1px solid rgba(255,255,255,.1)"><p style="font-size:23px; margin-left:16px; color:#FFF; font-family:'Courier New', Courier, monospace">法律案情统计分析</p></div>
+        </div>
+        <ul>
+            <li class="nav-item">
+                <a href="http://127.0.0.1:8081/关键字统计"><i class="my-icon nav-icon icon_1"></i><span>以涉案人员关键字进行统计</span></a>
+            
+            <ul>
+
+                </ul>
+                </li>
+           
+
+            <li class="nav-item">
+                <a href="javascript:;"><i class="my-icon nav-icon icon_2"></i><span>以案件类型进行统计</span><i class="my-icon nav-more"></i></a>
+                <ul>
+                    <li><a  href="{{ url_for('statistics.DT',DT='刑事裁定书') }}"></span>   刑事裁定书</span></a></li>
+                    <li><a  href="{{ url_for('statistics.DT',DT='民事判决书') }}"></span>   民事判决书</span></a></li>
+                    <li><a  href="{{ url_for('statistics.DT',DT='刑事决定书') }}"></span>   刑事判决书</span></a></li>
+                    <li><a  href="{{ url_for('statistics.DT',DT='执行裁定书') }}"></span>   执行裁定书</span></a></li>
+                </ul>
+                
+            </li>
+
+
+            <li class="nav-item">
+                <a href="javascript:;"><i class="my-icon nav-icon icon_3"></i><span>以地区进行统计</span><i class="my-icon nav-more"></i></a>
+                 <ul>
+                    <li><a href="{{ url_for('statistics.DT',DT='山西') }}"><span>山西</span></a></li>
+                    <li><a href="{{ url_for('statistics.DT',DT='贵州') }}"><span>贵州</span></a></li>
+                    <li><a href="{{ url_for('statistics.DT',DT='湖南') }}"><span>湖南</span></a></li>
+                    <li><a href="{{ url_for('statistics.DT',DT='新疆维' ) }}"><span>新疆</span></a></li>
+                    <li><a href="{{ url_for('statistics.DT',DT='湖北') }}"><span>湖北</span></a></li>
+                    <li><a href="{{ url_for('statistics.DT',DT='北京') }}"><span>北京</span></a></li>
+                    <li><a href="{{ url_for('statistics.DT',DT='河北') }}"><span>河北</span></a></li>
+                    <li><a href="{{ url_for('statistics.DT',DT='辽宁') }}"><span>辽宁</span></a></li>
+                    <li><a href="{{ url_for('statistics.DT',DT='吉林') }}"><span>吉林</span></a></li>
+                    <li><a href="{{ url_for('statistics.DT',DT='江西') }}"><span>江西</span></a></li>
+                    <li><a href="{{ url_for('statistics.DT',DT='黑龙江') }}"><span>黑龙江</span></a></li>
+                    <li><a href="{{ url_for('statistics.DT',DT='山东') }}"><span>山东</span></a></li>
+                    <li><a href="{{ url_for('statistics.DT',DT='河北') }}"><span>河北</span></a></li>
+                    <li><a href="{{ url_for('statistics.DT',DT='河南') }}"><span>河南</span></a></li>
+                    <li><a href="{{ url_for('statistics.DT',DT='宁夏回') }}"><span>宁夏</span></a></li>
+                </ul>
+
+                
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;"><i class="my-icon nav-icon icon_3"></i><span>以法院进行统计</span><i class="my-icon nav-more"></i></a>
+                <ul>
+                    <li><a href="{{ url_for('statistics.DT',DT='广东') }}"><span>广东省东莞市第三人民法院</span></a></li>
+                    <li><a href="{{ url_for('statistics.DT',DT='山东') }}"><span>山东省济南市历城区人民法院</span></a></li>
+                    <li><a href="{{ url_for('statistics.DT',DT='青岛') }}"><span>青岛铁路运输法院</span></a></li>
+                    <li><a href="{{ url_for('statistics.DT',DT='浙江' ) }}"><span>浙江省青田县人民法院</span></a></li>
+                    <li><a href="{{ url_for('statistics.DT',DT='江苏') }}"><span>江苏省常州市武进区人民法院</span></a></li>
+                    <li><a href="{{ url_for('statistics.DT',DT='江苏') }}"><span>江苏省扬州市江都区人民法院</span></a></li>
+                    <li><a href="{{ url_for('statistics.DT',DT='湖北') }}"><span>湖北省武汉市东西湖区人民法院</span></a></li>
+                    <li><a href="{{ url_for('statistics.DT',DT='新疆') }}"><span>新疆维吾尔自治区叶城县人民法院</span></a></li>
+                    <li><a href="{{ url_for('statistics.DT',DT='贵州') }}"><span>贵州省贵阳市云岩区人民法院</span></a></li>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div style="float:right; background-color:#FFF; width:86%; height:100%">
+        <div style="  margin-top: 0px width:86%; height:7.6%; background-color:#263238; text-align:center">
+            </br>
+            <form class="search" action="/statistics/dstatistic/info" method="post">
+                    <input onkeypress="if(event.keyCode==13) {submitBtn.click();return false;}" name="keyword1" placeholder="输入涉案人员进行统计">
+                    <button type="submit">统计</button>
+                </form>
+            </div>
+            <div style="width:86%;height:80%; margin-left:90px;margin-top:50px">
+                <img src="{{ url_for('static', filename= 'keyword/词云.jpg',_t=val1) }}" width="1650" height="900"/>          
+            </div>
+        
+    </div>
+    
+</body>
+</html>
+
+
