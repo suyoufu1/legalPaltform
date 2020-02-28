@@ -72,7 +72,7 @@ sqlparse==0.3.0
 urllib3==1.25.8
 visitor==0.1.3
 watchdog==0.10.2
-Werkzeug==0.14.1
+Werkzeug==0.15.3
 wordcloud==1.6.0
 WTForms==2.1
 yarg==0.1.9
