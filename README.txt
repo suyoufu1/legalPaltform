@@ -1,3 +1,23 @@
+项目目录结构
+      legalPaltform/
+        |-- app/
+        |   |-- algorithm/
+        |   |   |-- IdealWordCloudKit
+        |   |   |-- KeyInfoExtraction
+        |   |   |-- sentencesimarly
+        |   |-- controller
+        |   |-- models
+        |   |-- redis
+        |   |-- static
+        |   |-- templates
+        |   |-- utils
+        |   |-- build_database.py
+        |   |-- config.py
+        |   |-- extensions.py
+        |-- venv
+        |-- manage.py
+        |-- requirements.txt
+        |-- README.txt
 1.templates说明：
     主页：homepage
     关键字统计:keywordStatistics
@@ -23,7 +43,6 @@
   3.algorithm 算法：
     1）、sentencesimarly 句子相似度算法
     2）、KeyInfoExtraction 文本摘要抽取
-
    4.elasticsearch安装linux：
      1)安装jdk11以上
             1.安装命令：wget https://download.oracle.com/otn-pub/java/jdk/13.0.1+9/cec27d702aa74d5a8630c65ae61e4305/jdk-13.0.1_linux-x64_bin.tar.gz?AuthParam=1577954453_a6b4a63fb1bf26cb51d040fdef2f0229
@@ -71,5 +90,8 @@
              /opt/es/bin/elasticsearch  -d
 
          5)改一下配置文件，把集群和节点信息配了一下；然后修改了一下整个目录的所有权为elasticsearch；然后切换到elasticsearch用户，启动。后台启动./elasticsearch -d
-
-
+       5.python库的安装
+            所有依赖的库文件都在requirements.txt,clone项目后，直接用命令安装：pip install -r requirements.txt
+       6.启动文件
+            manage.py：启动程序
+       
