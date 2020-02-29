@@ -15,7 +15,7 @@ def search_keyword(value):
 
         }
     }
-    searched = es.search(index="legalbook_data", doc_type="legalbook_", body=query_body, size=1000)
+    searched = es.search(index="legalbook_data", doc_type="legalbook_", body=query_body, size=100)
     # 输出查询到的结果
     list = []
     for da in searched["hits"]["hits"]:
@@ -33,7 +33,7 @@ def search_document(value):
                     }
         }
     }
-    searched = es.search(index="legalbook_data", doc_type="legalbook_", body=query_body, size=1000)
+    searched = es.search(index="legalbook_data", doc_type="legalbook_", body=query_body, size=400)
     list = []
     for da in searched["hits"]["hits"]:
         list.append(da["_source"])
@@ -125,7 +125,7 @@ def search_all():
             }
         }
     }
-    searched = es.search(index="legalbook_data", doc_type="legalbook_", body=query_body, size=10000)
+    searched = es.search(index="legalbook_data", doc_type="legalbook_", body=query_body, size=1000)
     list = []
     for da in searched["hits"]["hits"]:
         list.append(da["_source"])

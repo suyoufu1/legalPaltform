@@ -14,7 +14,7 @@ class Config(object):
     EXPIRES_TIME = 60*3
 # 开发环境
 class DevelopmentConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'mysql://root:520000ww@47.106.183.183:3306/legalbook'
+    SQLALCHEMY_DATABASE_URI = 'mysql://root:520000ww@cdb-lx6fvfvk.cd.tencentcdb.com:10114/legalbook'
     # 配置redis
     REDIS_DB_URL = {
         'host': '47.106.183.183',
