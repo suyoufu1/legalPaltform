@@ -6,7 +6,7 @@ app = create_app('development') #加载配置，默认开发环境
 manager = Manager(app)
 manager.add_command('db',MigrateCommand)
 manager.add_command("runserver", Server(
-    host = '127.0.0.1',port=5000)
+    host = '47.106.183.183',port=8084)
 )
 # app = Flask(__name__)
 # app.register_blueprint(main,url_prefix="/")

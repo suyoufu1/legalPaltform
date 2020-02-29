@@ -94,4 +94,6 @@
             所有依赖的库文件都在requirements.txt,clone项目后，直接用命令安装：pip install -r requirements.txt
        6.启动文件
             manage.py：启动程序
-       
+        7.部署地址
+          47.106.183.183:8084
+          要在各个文件中修改ip和端口
