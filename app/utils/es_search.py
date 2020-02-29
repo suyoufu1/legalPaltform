@@ -83,15 +83,31 @@ def search_unio(value):
     for da in searched["hits"]["hits"]:
         list.append(da["_source"])
     return list
-def search_sim(value):
+def search_sim(document,region,text):
     query_body ={
         "query": {
-            "match": {
-                "text": {
-                    "query": value,
-                    "minimum_should_match": "95%"
+            "bool": {
+                "must": {
+                    "match": {
+                        "documenttype": document
+                    }
+                },
+                "must": {
+                    "match": {
+                        "region": region
+                    }
+                },
+                "must": {
+                    "match": {
+                        "text": {
+                            "query": text,
+                            "minimum_should_match": "95%"
+                        }
+                    }
                 }
             }
+
+
         }
     }
     searched = es.search(index="legalbook_data", doc_type="legalbook_", body=query_body, size=10)

@@ -20,9 +20,8 @@ def Type():
     des = request.form['des']
 
     # 通过案件类型
-    results = search_document(document)
     # 定义字典，保存id和分数
-    result = search_sim(des)
+    result = search_sim(document,region,des)
     num = len(result)
     # print(result)
     if not result:
