@@ -1,0 +1,6 @@
+DEBUG:root:This message should go to the log file
+INFO:root:So should this
+WARNING:root:And this, too
+DEBUG:pyecharts.engine.EnvironmentManager:load <class 'pyecharts.engine.EchartsEnvironment'> now for 'html'
+DEBUG:root:Loader for termcolor was unable to find the sources
+DEBUG:root:Loader for SocketServer was unable to find the sources

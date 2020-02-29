@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .hide {
+            display: none;
+        }
+
+        .clear::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .headbar {
+            padding: 14px;
+            background: #fff;
+        }
+
+        .headbar::after {
+            clear: both;
+            content: "";
+            display: block;
+            height: 10px;
+            border-bottom: 1px solid #4395ff;
+        }
+
+        .leftlogo {
+            float: left;
+            position: relative;
+            left: 80px;
+        }
+
+        .right {
+            float: right;
+            line-height: 110px;
+            font-size: 20px;
+        }
+
+        .logo {
+            height: 110px;
+            float: left;
+            position: relative;
+            margin-right: 30px;
+            border-radius: 5px;
+        }
+
+        h1 {
+            display: inline-block;
+            height: 40px;
+            font-size: 40px;
+            font-weight: bold;
+            line-height: 54px;
+            position: relative;
+        }
+
+        .form {
+            height: 300px;
+            position: relative;
+            background-color: rgb(249, 249, 249);
+        }
+
+        .textbox {
+            height: 150px;
+            width: 300px;
+            border: 1px solid red;
+        }
+
+        .body .right,
+        .body .left {
+            border: 2px solid black;
+            border-radius: 4px;
+            width: 600px;
+            float: left;
+            text-align: initial;
+            background-color: rgb(249, 249, 249);
+        }
+
+        .body {
+            display: inline-block;
+            min-width: 1000px;
+            overflow: hidden;
+            margin-top: 50px;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        .middle {
+            width: 200px;
+            height: 140px;
+            position: relative;
+            top: 152px;
+            margin-top: -70px;
+            float: left;
+        }
+
+        .textarea:hover {
+            border: 1px solid rgb(77, 144, 254);
+            outline: none;
+        }
+
+        .textarea:focus {
+            border: 1px solid rgb(77, 144, 254);
+            outline: none;
+        }
+
+        .textarea {
+            font-size: 25px;
+            display: block;
+            position: absolute;
+            margin-top: 48px;
+            margin-left: 33.2px;
+            border-radius: 10px;
+        }
+
+        .submit {
+            font-size: 30px;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .middlelogo {
+            width: 168px;
+            margin-top: 15px;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        body .body .right {
+            text-align: center;
+            line-height: 300px;
+        }
+
+        #jieguo {
+            display: inline-block;
+            font-size: 30px;
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="headbar">
+        <div class="leftlogo clear">
+            <img src="{{url_for('static',filename='img/law.jpg')}}" alt="logo" class="logo">
+            <h1>案情罪名预测</h1>
+        </div>
+        <div class="right">
+            <a href="http://47.106.183.183:8084">>>返回</a>
+        </div>
+    </div>
+    <div class="body clear">
+        <div class="left">
+            <form action=""  method="post" class="form">
+
+                <textarea rows="7" cols="40" class="textarea" runat="server" name="keyword" placeholder="案情罪名预测是用户输入需预测的案件的案情描述，本系统利用以往大量已判决案件的案情情节描述构建罪名分类模型，该模型是采用深度学习策略学习调整后准确率达到80%以上的分类模型，通过这个模型来帮助用户预测未判决案件的罪名" id="send"></textarea>
+
+
+
+
+            </form>
+            </div>
+        <div class="middle">
+            <button id="submit" class="submit">
+                开始预测
+                <script>
+                   var b = document.getElementById("submit");
+                   b.onclick=function(){
+                       console.log("here");
+                        var send = document.getElementById("send").value;
+
+                        var form = document.createElement("form");
+                        var sending = document.createElement("input");
+
+                        sending.setAttribute("type","text");
+                        sending.setAttribute("name","keyword");
+                        sending.setAttribute("class","hide");
+
+                        sending.value=send;
+                        form.setAttribute("class","hide");
+                        form.method = "post";
+                        form.action = "/predictions/prediction/crimclass";
+                        form.appendChild(sending);
+                        document.body.appendChild(form);
+                        form.submit();
+                    }
+                </script>
+            </button>
+            <img  src="{{url_for('static',filename='img/jiantou.jpg')}}" alt="" class="middlelogo">
+        </div>
+
+        <div class="right">
+        <div class="form">
+                <span id="jieguo"></span>
+                {{label}}
+            </div>
+
+
+    </div>
+    <script>
+    </script>
+</body>
+
+</html>
