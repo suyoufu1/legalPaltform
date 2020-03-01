@@ -46,7 +46,7 @@ def count():
     plt.title('案件类型比例图 总数量:' + str(counts))
     plt.axis('equal')
     #   print(sum)
-    plt.savefig("app/static/" + "案件类型统计2.jpg")
+    plt.savefig("app/static/" + "anjian.jpg")
     #   plt.show()
     return render_template('statistics.html')
 
@@ -91,7 +91,7 @@ def DT(DT):
     # 保存图片
     word_cloud2 = cloud.generate(str(keys))  # 产生词云数据 word_cloud
     # wcould="分词词云_"
-    wcould2 = "词云"
+    wcould2 = "cloud"
     img = wcould2 + ".jpg"
     l = 'app/static/keyword/'
     word_cloud2.to_file(l + '/' + img)
@@ -146,6 +146,6 @@ def keyword1():
             plt.text(rect.get_x() + rect.get_width() / 2, height+1, str(height), ha="center", va="bottom",size=20)
       '''
       # 添加图例
-      plt.savefig("app/static/统计/"+"统计.jpg")
+      plt.savefig("app/static/tongji/"+"tongji.jpg")
       return render_template('keywordStatistics.html',val1=time.time())
 
