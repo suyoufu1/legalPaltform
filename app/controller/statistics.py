@@ -101,7 +101,7 @@ def DT(DT):
     cloud.to_file(l + '/' + 'cloudword.png')
     return render_template('worldcloudStatistics.html',  val1=time.time())
 # 涉案人员统计 ：info
-@statistic.route('/dstatistic/info',methods=['POST','GET'])
+@statistic.route('/dstatistic/infos',methods=['POST','GET'])
 def keyword1():
 
       keyword=request.form['keyword1']
@@ -116,9 +116,7 @@ def keyword1():
       number[4] = session.query.filter(and_(session.keyword.like('%' + keyword + '%'), session.documenttype == "刑事附带民事判决书")).count()
       #number[5] = session.query.filter(session.keyword.like('%' + keyword + '%')).count() - number[0] -number[1]- number[2]-number[3]-number[4]
       number[5]=0
-      # 解决中文标题乱码
-      plt.rcParams['font.sans-serif'] = ['SimHei']
-      plt.rcParams['axes.unicode_minus'] = False
+
       font = {'family' : 'sans-serif','weight' : 'normal','size' : 23}
     #   print (plt.style.available)
       plt.style.use("ggplot")

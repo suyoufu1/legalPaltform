@@ -94,7 +94,7 @@ def search_sim(text):
                     }
         }
     }
-    searched = es.search(index="legalbook_datas", doc_type="legalbook_", body=query_body, size=8)
+    searched = es.search(index="legalbook_data", doc_type="legalbook_", body=query_body, size=8)
     list = []
     for da in searched["hits"]["hits"]:
         list.append(da["_source"])
