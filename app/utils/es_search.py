@@ -169,27 +169,6 @@ def search_empty():
     for da in searched["hits"]["hits"]:
         list.append(da["_source"])
     return list
-
-# 分页查询
-def search_page(puid,page_count,page_num):
-    query_body ={
-        "query": {
-            "bool": {
-                "must": {
-                    "exists": {
-                        "field": "field"
-                    }
-                }
-            }
-        }
-
-    }
-    from_page = int(page_count)*(int(page_num)-1)
-    searched = es.search(index="legalbook_data", q='offset:"'+str(puid)+'"',doc_type="legalbook_", body=query_body,size = 1000)
-    list = []
-    for da in searched["hits"]["hits"]:
-        list.append(da["_source"])
-    return list
 def es_nums():
     query_body = {
         "query": {
@@ -205,5 +184,3 @@ def es_nums():
     # for da in searched["hits"]["hits"]:
     #     list.append(da["_source"])
     return searched['count']
-list = es_nums()
-print(list)

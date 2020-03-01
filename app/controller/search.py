@@ -3,24 +3,17 @@ from sqlalchemy import or_,and_
 from flask import  request, render_template, session, Blueprint
 from app.models import session
 from app.algorithm.KeyInfoExtraction.abstract_textrank import AbstarctTextrank
-from app.utils.es_search import search_keyword,search_court,search_show,search_empty,es_search
+from app.utils.es_search import search_keyword,search_court,search_show
 from app.utils.get_page import get_page
 # 创建蓝本对象
 search = Blueprint('searchs',__name__)
 
 @search.route('/search/', methods=['GET'])
 def search1():
-    result = search_empty()
     page = int(request.args.get('page', 1))
     per_page = int(request.args.get('per_page', 7))
-    re = session.query.order_by('year')
-    # print(type(re))
     paginate = session.query.order_by('year').paginate(page, per_page, error_out=False)
-    # print(paginate)
-    # print(type(paginate))
     stus = paginate.items
-
-    num = len(stus)
     return render_template('searchShow.html',paginate=paginate,stus=stus)
 
 
