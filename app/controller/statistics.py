@@ -54,16 +54,13 @@ def count():
 @statistic.route('/dstatistic/<DT>',endpoint="DT", methods=['POST', 'GET'])
 def DT(DT):
     results = session.query.filter(or_(session.documenttype==DT,session.region.like('%'+DT+'%'),session.court.like('%'+DT+'%'))).all()
-    print(results)
     if not results:
         return render_template('worldcloudStatistics.html')
     # 定义一个字符串，保存关键字
     keyword = ""
     for res in results:
-        print(res.keyword)
         keyword += str(res.keyword)
     # 分词
-    print(keyword)
     fe = '|'.join(jieba.cut(keyword))
     santi_words = [x for x in jieba.cut(fe) if len(x) >= 0]
     jieba.disable_parallel()
@@ -101,7 +98,7 @@ def DT(DT):
     cloud.to_file(l + '/' + 'cloudword.png')
     return render_template('worldcloudStatistics.html',  val1=time.time())
 # 涉案人员统计 ：info
-@statistic.route('/dstatistic/infos',methods=['POST','GET'])
+@statistic.route('/dstatistic/zhiftu',methods=['POST','GET'])
 def keyword1():
 
       keyword=request.form['keyword1']
