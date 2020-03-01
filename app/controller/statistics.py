@@ -9,6 +9,14 @@ from collections import Counter
 from wordcloud import WordCloud
 import numpy as np
 import  time
+import logging
+import matplotlib
+logging.basicConfig(filename='log_examp.log',level=logging.DEBUG)
+logging.debug('This message should go to the log file')
+logging.info('So should this')
+logging.warning('And this, too')
+matplotlib.rcParams['font.sans-serif'] = ['SimHei']
+matplotlib.rcParams['font.family']='sans-serif'
 
 
 import threading
