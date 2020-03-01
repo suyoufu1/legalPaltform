@@ -1,30 +1,14 @@
 # -*- coding: utf-8 -*-
-from sqlalchemy import or_,and_
 from flask import  request, render_template, session, Blueprint
 from app.models import session
-from app.algorithm.KeyInfoExtraction.abstract_textrank import AbstarctTextrank
-from app.utils.es_search import search_keyword,search_all,search_document
-from sqlalchemy import text
 from sqlalchemy import or_,and_
-from sqlalchemy.sql.expression import func
-from flask_sqlalchemy  import SQLAlchemy
-from flask_paginate import Pagination,get_page_parameter
-from sqlalchemy.orm import sessionmaker
 import matplotlib.pyplot as plt
-import matplotlib
-import numpy as np
-from io import BytesIO
-import pymysql
-import random
 import jieba
-from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
+from wordcloud import  ImageColorGenerator
 from collections import Counter
-# from scipy.misc import imread
-import jieba.analyse as analyse
 from wordcloud import WordCloud
 import numpy as np
 import  time
-from  app.algorithm.IdealWordCloudKit.create_cloud import CreateWordCloud
 
 
 import threading
@@ -33,68 +17,53 @@ statistic = Blueprint('statistics',__name__)
 # 法律案情统计分析 : dstatistic
 @statistic.route('/dstatistic',methods=['GET', 'POST'])
 def count():
-    list = search_all()
-    Court = []
-    Region = []
-    document_Type = []
-    for l in list:
-        Court.append(l['court'])
-        Region.append(l["region"])
-        document_Type.append(l["documenttype"])
-    sum11 = len(document_Type)
-    # 解决中文标题乱码
-    plt.rcParams['font.sans-serif'] = ['SimHei']
-    plt.rcParams['axes.unicode_minus'] = False
-    print(document_Type)
-    number = np.arange(5)
-    for document in document_Type:
-        # print(document)
-        # 刑事裁定书
-        if document == "刑事判决书":
-            number[0] +=1
+    # 总数量
+    counts = session.query.filter().count()
+    print(counts)
 
-        # 刑事判决书
-        if document== "刑事判决书":
-            number[1] +=1
-        # 执行裁定书
-        if document == "执行裁定书":
-            number[2] +=1
-        # 民事
-        if document == "民事判决书" or document == "刑事附带民事判决书":
-            number[3] +=1
-        else:
-            number[4] += 1
+    # # 解决中文标题乱码
+    # plt.rcParams['font.sans-serif'] = ['SimHei']
+    # plt.rcParams['axes.unicode_minus'] = False
+    number = np.arange(6)
+    # 案件类型数量
+    number[0] = session.query.filter(session.documenttype == "刑事裁定书").count()
+    number[1] = session.query.filter(session.documenttype == "刑事判决书").count()
+    number[2] = session.query.filter(session.documenttype == "执行裁定书").count()
+    number[3] = session.query.filter(session.documenttype == "民事判决书").count()
+    number[4] = session.query.filter(session.documenttype == "刑事附带民事判决书").count()
+    # number[5] = counts - number[0] - number[1] - number[2] -number[3] -number[4]
 
     plt.style.use("ggplot")
     # 定义饼状图的标签
-    label = '民事判决书', '刑事裁定书', '执行裁定书', '刑事判决书', '其他'
+    label = '民事判决书', '刑事裁定书', '执行裁定书', '刑事判决书','刑事附带民事判决书'
     # 记录每一个饼状图的比例
     #   print(number[0])
     size = [number[3] / 100, number[0] / 100, number[2] / 100, number[1] / 100, number[4] / 100]
     # 定义每一块的颜色
-    colors = ['yellow', 'lightskyblue', 'lightcoral', 'green', 'blue']
+    colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral', 'blue']
 
     plt.pie(size, labels=label, colors=colors, autopct='%1.1f%%', shadow=True, startangle=110)
-    plt.title('案件类型比例图 总数量:' + str(sum11))
+    plt.title('案件类型比例图 总数量:' + str(counts))
     plt.axis('equal')
     #   print(sum)
     plt.savefig("app/static/" + "案件类型统计2.jpg")
     #   plt.show()
-    return render_template('statistics.html', court=Court, region=Region, document_Type=document_Type)
+    return render_template('statistics.html')
 
 # 关键字搜索statistics
 @statistic.route('/dstatistic/<DT>',endpoint="DT", methods=['POST', 'GET'])
 def DT(DT):
-    results = search_document(DT)
-    # results = session.query.filter(DT == session.document_Type).all()
-    # print(results[0].title)
+    results = session.query.filter(or_(session.documenttype==DT,session.region.like('%'+DT+'%'),session.court.like('%'+DT+'%'))).all()
+    print(results)
     if not results:
         return render_template('worldcloudStatistics.html')
     # 定义一个字符串，保存关键字
     keyword = ""
     for res in results:
-        keyword += str(res["keyword"])
+        print(res.keyword)
+        keyword += str(res.keyword)
     # 分词
+    print(keyword)
     fe = '|'.join(jieba.cut(keyword))
     santi_words = [x for x in jieba.cut(fe) if len(x) >= 0]
     jieba.disable_parallel()
@@ -137,25 +106,16 @@ def keyword1():
 
       keyword=request.form['keyword1']
       print(keyword)
-      list = search_keyword(keyword)
       number = np.arange(6)
-      for l in list:
-          # print(document)
-          # 刑事裁定书
-          if l["documenttype"] == "刑事判决书":
-              number[0] += 1
-
-          # 刑事判决书
-          if l["documenttype"] == "刑事判决书":
-              number[1] += 1
-          # 执行裁定书
-          if l["documenttype"] == "执行裁定书":
-              number[2] += 1
-          # 民事
-          if l["documenttype"] == "民事判决书" :
-              number[3] += 1
-          if  l["documenttype"] == "刑事附带民事判决书":
-              number[4] += 1
+      number[0] = session.query.filter(and_(session.keyword.like('%' + keyword + '%'),session.documenttype=="刑事裁定书")).count()
+      print(number[0])
+      number[1] = session.query.filter(and_(session.keyword.like('%' + keyword + '%'), session.documenttype == "刑事判决书")).count()
+      print(number[1])
+      number[2] = session.query.filter(and_(session.keyword.like('%' + keyword + '%'), session.documenttype == "执行裁定书")).count()
+      number[3] = session.query.filter(and_(session.keyword.like('%' + keyword + '%'), session.documenttype == "民事判决书")).count()
+      number[4] = session.query.filter(and_(session.keyword.like('%' + keyword + '%'), session.documenttype == "刑事附带民事判决书")).count()
+      #number[5] = session.query.filter(session.keyword.like('%' + keyword + '%')).count() - number[0] -number[1]- number[2]-number[3]-number[4]
+      number[5]=0
       # 解决中文标题乱码
       plt.rcParams['font.sans-serif'] = ['SimHei']
       plt.rcParams['axes.unicode_minus'] = False
@@ -183,8 +143,8 @@ def keyword1():
       # 添加标题
       plt.title('"'+keyword+'"'+"所对应的案件类型数量直方图",fontsize=50,color="purple")
       # 添加纵横轴的刻度
-      plt.xticks(index, ('民事判决书', '执行裁定书', '刑事裁定书', '刑事判决书', '刑事附带民事裁定书'),fontsize="16")
-      plt.yticks(np.arange(0, max(number)+5, int((max(number)+5)/10+1)),fontsize=23)
+      plt.xticks(index, ('民事判决书', '执行裁定书', '刑事裁定书', '刑事判决书', '刑事附带民事裁定书','其他'),fontsize="30")
+      plt.yticks(np.arange(0, max(number)+5, int((max(number)+5)/10+1)),fontsize=30)
       '''
       for rect in p2: 
             height = rect.get_height() 

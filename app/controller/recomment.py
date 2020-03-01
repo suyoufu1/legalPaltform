@@ -15,13 +15,13 @@ def like():
 
 @recomment.route('/recomment/keyword', methods=['POST', 'GET'])
 def Type():
-    document = request.form['document']
-    region = request.form['region']
+    # document = request.form['document']
+    # region = request.form['region']
     des = request.form['des']
 
     # 通过案件类型
     # 定义字典，保存id和分数
-    result = search_sim(document,region,des)
+    result = search_sim(des)
     num = len(result)
     # print(result)
     if not result:

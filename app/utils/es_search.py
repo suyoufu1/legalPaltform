@@ -33,7 +33,7 @@ def search_document(value):
                     }
         }
     }
-    searched = es.search(index="legalbook_data", doc_type="legalbook_", body=query_body, size=400)
+    searched = es.search(index="legalbook_data", doc_type="legalbook_", body=query_body, size=100)
     list = []
     for da in searched["hits"]["hits"]:
         list.append(da["_source"])
@@ -83,34 +83,18 @@ def search_unio(value):
     for da in searched["hits"]["hits"]:
         list.append(da["_source"])
     return list
-def search_sim(document,region,text):
+def search_sim(text):
     query_body ={
         "query": {
-            "bool": {
-                "must": {
-                    "match": {
-                        "documenttype": document
-                    }
-                },
-                "must": {
-                    "match": {
-                        "region": region
-                    }
-                },
-                "must": {
                     "match": {
                         "text": {
                             "query": text,
-                            "minimum_should_match": "95%"
+                            "minimum_should_match": "90%"
                         }
                     }
-                }
-            }
-
-
         }
     }
-    searched = es.search(index="legalbook_data", doc_type="legalbook_", body=query_body, size=10)
+    searched = es.search(index="legalbook_datas", doc_type="legalbook_", body=query_body, size=8)
     list = []
     for da in searched["hits"]["hits"]:
         list.append(da["_source"])
@@ -125,7 +109,7 @@ def search_all():
             }
         }
     }
-    searched = es.search(index="legalbook_data", doc_type="legalbook_", body=query_body, size=1000)
+    searched = es.search(index="legalbook_data", doc_type="legalbook_", body=query_body, size=500)
     list = []
     for da in searched["hits"]["hits"]:
         list.append(da["_source"])
@@ -206,15 +190,20 @@ def search_page(puid,page_count,page_num):
     for da in searched["hits"]["hits"]:
         list.append(da["_source"])
     return list
-def es_search(value):
+def es_nums():
     query_body = {
-        "from": 0, "size": 10,
         "query": {
-            "multi_match": {
-                "query": value,
-                "fields": ["court", "documenttype", "year"]
+            "match_all":{
+
             }
 
         }
 
     }
+    searched = es.count(index="legalbook_data",  doc_type="legalbook_", body=query_body)
+    # list = []
+    # for da in searched["hits"]["hits"]:
+    #     list.append(da["_source"])
+    return searched['count']
+list = es_nums()
+print(list)
