@@ -99,23 +99,18 @@ def DT(DT):
     return render_template('worldcloudStatistics.html',  val1=time.time())
 # 涉案人员统计 ：info
 @statistic.route('/dstatistic/zhiftu',methods=['POST','GET'])
-def keyword1():
+def keyword():
 
       keyword=request.form['keyword1']
-      print(keyword)
       number = np.arange(6)
       number[0] = session.query.filter(and_(session.keyword.like('%' + keyword + '%'),session.documenttype=="刑事裁定书")).count()
-      print(number[0])
       number[1] = session.query.filter(and_(session.keyword.like('%' + keyword + '%'), session.documenttype == "刑事判决书")).count()
-      print(number[1])
       number[2] = session.query.filter(and_(session.keyword.like('%' + keyword + '%'), session.documenttype == "执行裁定书")).count()
       number[3] = session.query.filter(and_(session.keyword.like('%' + keyword + '%'), session.documenttype == "民事判决书")).count()
       number[4] = session.query.filter(and_(session.keyword.like('%' + keyword + '%'), session.documenttype == "刑事附带民事判决书")).count()
-      #number[5] = session.query.filter(session.keyword.like('%' + keyword + '%')).count() - number[0] -number[1]- number[2]-number[3]-number[4]
       number[5]=0
 
       font = {'family' : 'sans-serif','weight' : 'normal','size' : 23}
-    #   print (plt.style.available)
       plt.style.use("ggplot")
       # 创建一个点数为 8 x 6 的窗口, 并设置分辨率为 80像素/每英寸
       plt.figure(figsize=(25, 20), dpi=500)
