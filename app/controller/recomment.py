@@ -10,7 +10,7 @@ recomment = Blueprint('recomments', __name__)
 
 @recomment.route('/recomment', methods=['GET', 'POST'])
 def like():
-    return render_template('similarPage.html')
+    return render_template('nolaisiwenshu.html')
 
 
 @recomment.route('/recomment/keyword', methods=['POST', 'GET'])
@@ -25,5 +25,5 @@ def Type():
     num = len(result)
     # print(result)
     if not result:
-        return render_template('noSimilar.html', result=result)
-    return render_template('similarShow.html', result=result,num = num)
+        return render_template('nolaisiwenshu.html', result=result)
+    return render_template('laisiwenshu.html', result=result,num = num)

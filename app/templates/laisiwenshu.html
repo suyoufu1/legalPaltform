@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!-- saved from url=(0109)http://wenshu.court.gov.cn/website/wenshu/181217BMTKHNT2W0/index.html?pageId=01ee5fd223fee6c82585091ede70dab3 -->
+<html xmlns:diy=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>文书列表</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="public">
+    <meta name="renderer" content="webkit">
+   <!--  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    
+    <meta http-equiv="X-XSS-Protection" content="0">
+    
+<!--    <link type="image/x-icon" rel="icon" href="http://wenshu.court.gov.cn/website/wenshu/images/favicon.ico">-->
+<!--    <link type="image/x-icon" rel="shortcut icon" href="http://wenshu.court.gov.cn/website/wenshu/images/favicon.ico">-->
+    <link rel="stylesheet" href="./wsw_files/common.css">
+    <link rel="stylesheet"  href="{{url_for('static',filename='wsw_files/common.css')}}">
+    <link rel="stylesheet" href="./wsw_files/layui.css">
+    <link rel="stylesheet"  href="{{url_for('static',filename='wsw_files/layui.css')}}">
+    <!--[if lt IE 9]><script r='m'>document.createElement("section")</script><![endif]--><script>
+      /*互联网或法院专网标识(inner:法院内网；outer:互联网)*/
+      $globalNet = "outer";
+      (function(){
+        if(!0){return;}
+        document.createElement("diy");
+        document.createElement("diy:lawyee");
+      })()
+    </script>
+    <script src="./wsw_files/jquery-1.12.4.min.js.下载"></script>
+    <script src="{{url_for('static',filename='wsw_files/jquery-1.12.4.min.js.下载')}}"></script>
+    <script src="./wsw_files/layui.js.下载"></script>
+    <script src="{{url_for('static',filename='wsw_files/layui.js.下载')}}"></script>
+    <script src="./wsw_files/version.js.下载"></script>
+    <script src="{{url_for('static',filename='wsw_files/version.js.下载')}}"></script>
+    <script>(function($) {"use strict";$.event.special.valuechange = {teardown: function (namespaces) {$(this).unbind('.valuechange');},handler: function (e) {$.event.special.valuechange.triggerChanged($(this));},add: function (obj) {$(this).on('keyup.valuechange cut.valuechange paste.valuechange input.valuechange', obj.selector, $.event.special.valuechange.handler);},triggerChanged: function (element) {var current = element[0].contentEditable === 'true' ? element.html() : element.val() , previous = typeof element.data('previous') === 'undefined' ? element[0].defaultValue : element.data('previous');if (current !== previous) {element.trigger('valuechange', [element.data('previous')]);element.data('previous', current);}}}})(window.jQuery);</script>
+<link rel="stylesheet" href="./wsw_files/listText.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='wsw_files/listText.css')}}">
+<link rel="stylesheet" href="./wsw_files/style.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='wsw_files/style.min.css')}}">
+<script src="./wsw_files/jstree.min.js.下载"></script>
+    <script src="{{url_for('static',filename='wsw_files/jstree.min.js.下载')}}"></script>
+<link rel="stylesheet" href="./wsw_files/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='wsw_files/font-awesome.min.css')}}">
+<link rel="stylesheet" href="./wsw_files/index.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='/wsw_files/index.css')}}">
+<link rel="stylesheet" href="./wsw_files/common.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='wsw_files/common.css')}}">
+<script type="text/javascript" src="./wsw_files/divscroll.js.下载"></script>
+    <script type="text/javascript" src="{{url_for('static',filename='wsw_files/divscroll.js.下载')}}"></script>
+<script type="text/javascript" src="./wsw_files/wenshulist1.js.下载"></script>
+    <script type="text/javascript" src="{{url_for('static',filename='wsw_files/wenshulist1.js.下载')}}"></script>
+<script type="text/javascript" src="./wsw_files/strToBinary.js.下载"></script>
+    <script type="text/javascript" src="{{url_for('static',filename='wsw_files/strToBinary.js.下载')}}"></script>
+<script type="text/javascript" src="./wsw_files/placeholder.js.下载"></script>
+    <script type="text/javascript" src="{{url_for('static',filename='wsw_files/placeholder.js.下载')}}"></script>
+<script src="./wsw_files/common.js.下载"></script>
+    <script  src="{{url_for('static',filename='wsw_files/common.js.下载')}}"></script>
+
+<style>
+     textarea{
+        resize:none;
+       }
+      .search-con {
+        margin-top: 0px;
+      }
+      .pageButton.disabled {
+        pointer-events: none;
+        cursor: default;
+      }
+      .jstree-default .jstree-anchor {
+        line-height: 24px;
+        max-width: 192px;
+      }
+      .jstree-anchor, .jstree-anchor:link, .jstree-anchor:visited, .jstree-anchor:hover, .jstree-anchor:active {
+        text-decoration: none;
+        color: #333;
+      }
+      .left_7_3 a {
+        margin-right: 5px;
+      }
+    .advenced-search{
+                    border: 2px solid #cd3c3f;
+                    border-right:0px;
+                }
+                .search-middle{
+                    border-top: 2px solid #cd3c3f;
+                    border-bottom: 2px solid #cd3c3f;
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                    -webkit-border-top-right-radius:0px;
+                    -moz-border-top-right-radius: 0px;
+                    -ms-border-top-right-radius: 0px;
+                    -o-border-top-right-radius: 0px;
+                    -webkit-border-bottom-right-radius:0px;
+                    -moz-border-bottom-right-radius: 0px;
+                    -ms-border-bottom-right-radius: 0px;
+                    -o-border-bottom-right-radius: 0px;
+                    margin-right:10;
+                }
+                .advencedWrapper{
+                    top:-2px;
+                }
+                .search-rightBtn{
+                    width:85px;
+                    background:#cd3c3f;
+                    border-radius:0px;
+                    font-size:20px;
+                    letter-spacing: 17px;
+                }
+</style>
+<script type="text/javascript">
+  //智能提示列表index
+  var liInd = -1;
+
+</script>
+
+    <!--解决ie9以下媒体查询分辨率问题-->
+    <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+    
+  
+    
+    <script src="./wsw_files/index.js.下载"></script>
+            <script  src="{{url_for('static',filename='wsw_files/index.js.下载')}}"></script>
+
+    <script src="./wsw_files/website.js.下载" type="text/javascript"></script>
+            <script  src="{{url_for('static',filename='wsw_files/website.js.下载')}}" type="text/javascript"></script>
+
+    <!-- Gridsum tracking code begin. 国双流量监测探针-->
+    <script type="text/javascript">
+      if($globalNet=='outer1'){
+        var _gsq = _gsq || [];
+        (function () {
+          var s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.async = true;
+          s.src = (location.protocol == 'https:' ? 'https://ssl.' : 'http://static.') + 'gridsumdissector.com/js/Clients/GWD-002808-030F33/gs.js';
+          var    firstScript = document.getElementsByTagName('script')[0];
+          firstScript.parentNode.insertBefore(s, firstScript);
+        })();
+      }
+      function toPage(url){
+    	  window.location.href=url+"&pageId="+Math.random();
+      }
+      function login(url){
+    		if(navigator.userAgent.indexOf("MSIE")>-1){
+                var referLink = document.createElement('a');
+                referLink.href=url;
+                document.body.appendChild(referLink);
+                referLink.click();
+            }else{
+            	window.location.href=url;
+            }
+      }
+    </script>
+    <!--Gridsum tracking code end. -->
+
+  <link id="-layer" rel="stylesheet" href="./wsw_files/layer.css" media="all">
+        <link id="layuicss-layer" rel="stylesheet" href="{{url_for('static',filename='wsw_files/layer.css')}}" >
+    <link id="-laydate" rel="stylesheet" href="./wsw_files/laydate.css" media="all">
+        <link id="layuicss-laydate" rel="stylesheet" href="{{url_for('static',filename='wsw_files/laydate.css')}}" media="all">
+</head>
+  <body class="vsc-initialized">
+  <div class="main">
+
+    
+
+
+
+    <!-- <div class="item_table" data-id="3dec8c82614adc710a477b688edb63cb"><diy:lawyee id="_view_1545034746000" var-name="_var_name_1545034746000"><div></div></diy:lawyee></div> -->
+    
+    <div class="haeder" style=" text-align:center;margin-top:80px;">
+      
+  
+    	<div >
+           <h1  style="font-size:80px; font-weight:bold; font-family:'Times New Roman', Times, serif; color:rgb(15, 5, 5); ">
+            类似案件推荐
+          </h1>
+       </div>
+
+
+    </div>
+  </div>
+    
+<div class="item_table" data-id="86d9103fca4fb504abae00c4d2026efc" >
+
+<div class="listTMain clearfix">
+
+
+
+  <div class="LM_right item_table" data-id="1161ebf6927364f0ac69149b6e929f25" data-desc="检索条件" style="width: 1597.98px;">
+      <diy:lawyee id="_view_1545035259000" var-name="_var_name_1545035259000"><div class="listText"> <div class="LT_box"> <div class="LT_btn clearfix common_lt">
+
+
+
+	  <div class="LT_Filter clearfix">
+          <div class="LT_Filter_left"></div>
+          <div class="LT_Filter_right clearfix"> </div>
+      </div> </div> </div>
+      </diy:lawyee>
+
+
+      <diy:lawyee id="_view_1545184311000" var-name="_var_name_1545184311000" style="display: inline;">
+      <div class="LM_con clearfix" style="background: none;">
+          <div class="tab-category" ><strong>案件 当前数量:{{num}}</strong></div>
+            <div  ><strong><a href="http://127.0.0.1:5000/recomments/recomment">返回</a> </strong></div>
+          <div class="fl con_left clearfix" style="display: none;"> <a href="http://wenshu.court.gov.cn/website/wenshu/181217BMTKHNT2W0/index.html"> </a>
+              <a id="chartListBtn" href="javascript:;">
+              </a>
+          </div>
+      </div>
+
+       <div class="LM_tool clearfix">
+              <!-- <div class="fl tool_PX " data-value="s52"> <a href="javascript:;">审判程序</a> </div> --> <div class="fr tool_All">
+              <a class="AllSelect" href="javascript:;"><input type="checkbox" id="AllSelect"><label for="AllSelect">全选</label></a>
+              <a class="AllKeep" href="javascript:;">批量收藏</a> <a class="AllDownload" href="javascript:void(0);">批量下载</a>
+       </div>
+
+      </div>
+
+          {% for result in result %}
+      <div class="LM_list">
+
+          <div class="List_label clearfix">
+            <div class="labelOne"></div>
+          <!-- <span class="on_1">推荐案例</span> -->
+          </div>
+
+
+
+
+
+			<ul class="index_arc" >
+
+
+				<li class="index_arc_item no_pic" style="height:auto">
+               <div>
+                 <h4 class="title" style="font-size:15px">
+                  <a id="echoResult_title" href="{{ url_for('searchs.title',title=result.title) }}">
+                    {{result.title}}
+                  </a>
+                </div>
+
+                </br>
+              <div>
+					<div class="date_hits" >
+                        <span>{{result.documenttype}}</span>
+                        <span></span>
+                        <span>{{result.court}}</span>
+
+
+                    </div>
+                    <div class="date_hits" >
+                    {{result.information_people}}<br>
+
+
+                    </div>
+
+                </li>
+
+
+
+          </ul>
+
+
+              <div class="List_label2 clearfix">
+                  <div class="fr">
+                      <a data-value="768bb884f6374650bbafab6f00c2cd0a" class="a_sc" href="javascript:void(0)">
+                          <i class="fa fa-heart-o"> </i> 收藏</a>
+                              <a data-value="768bb884f6374650bbafab6f00c2cd0a" class="a_xz" href="javascript:void(0)">
+                          <i class="a_xzBox"></i> 下载
+                      </a>
+                  </div>
+              </div>
+        {% endfor %}
+         </div>
+
+          <!--分页-->
+</diy:lawyee>
+</div>
+</div>
+
+  
+    <input name="__RequestVerificationToken" type="hidden" value="Wx8dJs89bknaug7yE1xN3UAf">
+    <ul class="layui-fixbar">
+        <li class="layui-icon layui-fixbar-top" lay-type="top" style="display: list-item;">
+        </li>
+    </ul>
+</body>
+</html>

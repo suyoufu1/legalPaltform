@@ -1,0 +1,368 @@
+table td{
+	border:1px solid #ccc;
+
+}
+
+.detailBg{
+	background: #eee8d8;
+}
+.detailBg .detailBox{
+	width: 90%;
+	margin: 0 auto;
+	background: #fff;
+	padding: 25px 0;
+	position: relative;
+}
+.detailBg .detailBox .del_left{
+	width: 130px;
+	float: left;
+	position: relative;
+	height: 800px;
+}
+.detailBg .detailBox .del_left .left_fixed{
+	position: fixed;
+	padding-right: 5px;
+	width: 130px;
+}
+.detailBg .detailBox .del_left .left_btn{
+	text-align: right;
+	padding-top: 30px;
+	cursor: pointer;
+	color: #97989a;
+}
+.detailBg .detailBox .del_left .mulu_box{
+	display: none;
+}
+.detailBg .detailBox .del_left .mulu_box .mulu_top,.detailBg .detailBox .del_left .mulu_box .mulu_bottom{
+	text-align: right;
+	height: 20px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+.detailBg .detailBox .del_left .mulu_box .mulu_top img,.detailBg .detailBox .del_left .mulu_box .mulu_bottom img{
+	margin: 0;
+	padding: 0;
+	position: absolute;right: 0;
+}
+.detailBg .detailBox .del_left .mulu_box .mulu_top img{
+	bottom: 0;
+}
+.detailBg .detailBox .del_left .mulu_box .mulu_bottom img{
+	top: 0;
+}
+
+.detailBg .detailBox .del_left .mulu_box .mulu_center{
+	background-image: url(../images/detail/content_summary_line.png);
+	background-position: right top;
+	background-repeat: repeat-y;
+}
+.detailBg .detailBox .del_left .mulu_box .mulu_center ul{
+	padding: 15px 0 40px 0;
+}
+.detailBg .detailBox .del_left .mulu_box .mulu_center ul li{
+	text-align: right;
+	height: 35px;
+	line-height: 35px;
+}
+.detailBg .detailBox .del_left .mulu_box .mulu_center ul li a{
+	display: block;
+	text-align: right;
+	height: 35px;
+	line-height: 35px;
+	background-image: url(../images/detail/content_summary_node.png);
+	background-position: right top;
+	background-repeat: no-repeat;
+	padding-right: 18px;
+}
+.detailBg .detailBox .del_left .mulu_box .mulu_center ul li a:hover{
+	font-weight: bold;
+	background-image: url(../images/detail/content_directory_icon.png);
+	background-position: right center;
+}
+.detailBg .detailBox .del_left .mulu_box .mulu_center ul li a.on{
+	font-weight: bold;
+	background-image: url(../images/detail/content_directory_icon.png);
+	background-position: right center;
+}
+
+.detailBg .detailBox .del_center{
+	/*min-width: 800px;*/
+	float: left;
+	
+	/*min-height: 1200px;*/
+}
+.detailBg .detailBox .del_center .PDF_box{
+	padding: 25px 25px 0 25px;
+	border: 1px solid #ddd;
+}
+.detailBg .detailBox .del_center .PDF_box .PDF_title{
+	text-align: center;
+    line-height: 30px;
+    margin: 10px 0;
+    font-family: 黑体;
+    font-size: 24px;
+}
+.detailBg .detailBox .del_center .PDF_box .PDF_cut{
+	position: relative;
+	padding-top: 45px;
+	border-bottom: 1px dashed #ddd;
+}
+.detailBg .detailBox .del_center .PDF_box .PDF_cut span{
+	display: inline-block;
+	width: 50%;
+	line-height: 30px;
+	float: left;
+}
+.detailBg .detailBox .del_center .PDF_box .PDF_cut span.spanLeft{
+	text-align: left;
+	padding-left: 30px;
+}
+.detailBg .detailBox .del_center .PDF_box .PDF_cut span.spanRight{
+	text-align: left;
+	padding-left: 0px;
+}
+.detailBg .detailBox .del_center .PDF_box .PDF_cut a{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+}
+.detailBg .detailBox .del_center .PDF_box .PDF_cut a.a_download{
+	right: 50px;
+	bottom: -3px;
+}
+.detailBg .detailBox .del_center .PDF_box .PDF_cut a.a_print{
+	right: 10px;
+	bottom: -3px;
+}
+.detailBg .detailBox .del_center .PDF_box .PDF_pox{
+	padding: 15px 0 25px 0;
+	min-height: 1200px;
+	background: url(../images/detail/bg_watermark.png) top center repeat-y;
+}
+.detailBg .detailBox .del_center .PDF_gg{
+	padding: 10px 0;
+}
+.detailBg .detailBox .del_center .PDF_gg h4{
+	text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: "微软雅黑";
+    line-height: 50px;
+}
+.detailBg .detailBox .del_center .PDF_gg p{
+	line-height: 30px;
+	text-indent: 2em;
+}
+.detailBg .detailBox .del_right{
+	width: 210px;
+	float: right;
+	/*background: #006600;*/
+	position: relative;
+}
+.detailBg .detailBox .del_right .right_fixed{
+	padding-left: 4px;
+}
+.detailBg .detailBox .del_right .right_btn{
+	/*text-align: right;*/
+	padding-top: 30px;
+	cursor: pointer;
+	color: #97989a;
+}
+.detailBg .detailBox .del_right .gaiyao_box{
+	display: none;
+}
+.detailBg .detailBox .del_right .gaiyao_box .gaiyao_top,.detailBg .detailBox .del_right .gaiyao_box .gaiyao_bottom{
+	/*text-align: right;*/
+	height: 20px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+.detailBg .detailBox .del_right .gaiyao_box .gaiyao_top img,.detailBg .detailBox .del_right .gaiyao_box .gaiyao_bottom img{
+	margin: 0;
+	padding: 0;
+	position: absolute;left: 0;
+}
+.detailBg .detailBox .del_right .gaiyao_box .gaiyao_top img{
+	bottom: 0;
+}
+.detailBg .detailBox .del_right .gaiyao_box .gaiyao_bottom img{
+	top: 0;
+}
+
+.detailBg .detailBox .del_right .gaiyao_box .gaiyao_center{
+	background-image: url(../images/detail/content_summary_line.png);
+	background-position: left top;
+	background-repeat: repeat-y;
+}
+.detailBg .detailBox .del_right .gaiyao_box .gaiyao_center ul{
+	padding: 15px 0 40px 0;
+}
+.detailBg .detailBox .del_right .gaiyao_box .gaiyao_center ul li{
+	display: block;
+	text-align: left;
+	line-height: 35px;
+	background-image: url(../images/detail/content_summary_node.png);
+	background-position: left top;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+	font-weight: bold;
+	font-size: 16px;
+	color: #555;
+}
+.detailBg .detailBox .del_right .gaiyao_box .gaiyao_center ul li h4{
+	padding-left: 1em;
+}
+.detailBg .detailBox .del_right .gaiyao_box .gaiyao_center ul li h4 span{
+	float: left;
+	width: 60px;
+	font-size: 12px;
+	font-weight: bold;
+}
+.detailBg .detailBox .del_right .gaiyao_box .gaiyao_center ul li h4 a{
+	float: left;
+	font-size: 12px;
+	color: #B91516;
+    text-decoration: underline;
+	font-weight: lighter;
+	width: 100px;
+}
+.detailBg .detailBox .del_right .gaiyao_box .gaiyao_center ul li h4 b{
+	float: left;
+	font-size: 12px;
+	font-weight: lighter;
+	width: 100px;
+}
+.detailBg .detailBox .del_right .gaiyao_box .gaiyao_center ul li h5{
+	font-size: 12px;
+	font-weight: lighter;
+	line-height: 22px;
+	margin-bottom: 20px;
+	text-indent: 1em;
+}
+.detailBg .detailBox .del_right .gaiyao_box .gaiyao_center ul li p{
+	text-indent: 2em;
+	line-height: 26px;
+}
+.detailBg .detailBox .del_right .gaiyao_box .gaiyao_center ul li p a{
+	font-size: 12px;
+	font-weight: lighter;
+	line-height: 26px;
+	color: #B91516;
+    text-decoration: underline;
+}
+
+.detail_guanlian .list_Association{
+	padding: 0 50px 15px 0px;
+}
+.detail_guanlian .list_Association h4{
+	color: #888;
+	line-height: 40px;
+	padding-top: 10px;
+}
+.detail_guanlian .list_Association .guanLian{
+	color: #7a7a7a;
+	line-height: 24px;
+}
+.detail_guanlian .list_Association .guanLian span{
+	color: #C50009;
+	display: inline-block;
+	width: 30px;
+}
+.detail_guanlian .list_Association .guanLian b{
+	display: inline-block;
+	width: 50px;
+	height: 24px;
+	vertical-align: middle;
+}
+
+.detail_guanlian .list_Association .guanLian a{
+	color: #7a7a7a;
+}
+.detail_guanlian .list_Association .guanLian a:hover{
+	color: #C50009;
+	text-decoration: underline;
+}
+.detail_guanlian .list_Association .guanLian a i{
+	padding: 0 15px 0 0;
+}
+
+
+
+
+
+
+.fixed_YX{
+	position: fixed;
+	padding-left: 1px;
+	z-index: 3;
+	width: 47px;
+	height: 300px;
+	/*right: 20px;*/
+	bottom: 0px;
+}
+.fixed_YX .yx_box{
+	position: relative;
+}
+.fixed_YX .yx_box span{
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	right: -10px;
+	top: -10px;
+	cursor: pointer;
+}
+.fixed_YX a{
+	margin-bottom: 1px;
+	display: block;
+	text-align: center;
+	font-size: 16px;
+	color: #c90101;
+	font-weight: bold;
+	background: #fff;
+	height: 49px;
+	width:47px;
+	/*line-height: 22px;*/
+}
+
+.Fixed_ewm{
+	position: fixed;
+	z-index: 99999;
+	width: 405px;
+	height: 445px;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	border: 2px solid #B91516;
+	background: #fff;
+	display: none;
+	border-radius: 5px;
+}
+.Fixed_ewm h4{
+	position: relative;
+	height: 40px;
+	line-height: 40px;
+	background: #B91516;
+	color: #fff;
+	text-indent: 1em;
+}
+.Fixed_ewm h4 span{
+	position: absolute;
+	right: 10px;
+	font-size: 20px;
+	line-height: 40px;
+	width: 40px;
+	text-align: center;
+	font-weight: lighter;
+	cursor: pointer;
+}
+.Fixed_ewm p{
+	text-align: center;
+	
+}
+
+
+

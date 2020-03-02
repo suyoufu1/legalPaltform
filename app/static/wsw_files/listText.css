@@ -1,0 +1,749 @@
+.searchBox{
+	width:90%;
+	margin:0 auto;
+	background: #fff;
+	padding: 40px 0 20px 0;
+}
+
+
+.listText {
+	/*background: url(../images/list/list_bg.png);*/
+	padding-bottom: 15px;
+	min-height: 100px;
+}
+
+.listText .LT_box {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.listText .LT_box .LT_btn {
+	height: 50px;
+	line-height: 50px;
+	text-align: right;
+}
+.listText .LT_box .LT_btn2{
+	width: 90%;
+	margin: 0 auto;
+}
+.listText .LT_box .LT_btn .LT_Filter_left {
+	width: 110px;
+	height: 50px;
+	line-height: 50px;
+	left: 0;
+	color: #ae0002;
+	font-weight: bold;
+	text-align:left;
+}
+.listText .LT_box .LT_btn a {
+	color: #333333;
+	display: inline-block;
+	margin-left: 30px;
+}
+
+.listText .LT_box .LT_btn a:hover {
+	color: #c50009;
+}
+
+.listText .LT_box .LT_Filter {
+	position: relative;
+}
+.listText .LT_box .LT_Filter2 {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.listText .LT_box .LT_Filter2 .LT_Filter_left {
+	width: 70px;
+	height: 26px;
+	line-height: 26px;
+	position: absolute;
+	left: 0;
+	top: -35px;
+	color: #ae0002;
+	font-weight: bold;
+}
+
+.listText .LT_box .LT_Filter .LT_Filter_right {
+	padding-left: 0px;
+}
+
+.listText .LT_box .LT_Filter .LT_Filter_right p {
+	float: left;
+	margin-right: 10px;
+	line-height: 26px;
+	padding: 0 7px;
+	border: 1px solid #dcdcdc;
+	color: #333;
+	background: #fff;
+	margin-bottom: 10px;
+}
+
+.listText .LT_box .LT_Filter .LT_Filter_right p i {
+	color: #aaaaaa;
+	cursor: pointer;
+	margin-left: 5px;
+}
+
+.listTMain {
+	padding: 15px 20px 20px 20px;
+	background-color: #fff;
+	width: 90%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.listTMain .LM_left {
+	float: left;
+	width: 260px;
+	border: 1px solid #dddddd;
+	border-top: none;
+}
+
+.tree {
+	line-height: 100%;
+}
+
+
+/*中部-内容左侧数据*/
+
+.treeItem {
+	text-align: left;
+	font-family: 微软雅黑;
+	font-size: 14px;
+	color: #222222;
+	/*text-indent: 1em;*/
+}
+
+
+/*中部-内容左侧数据项标*/
+
+.treeItem .itemhead {
+	background-color: #fff;
+	line-height: 40px;
+	width: 100%;
+	height: 40px;
+	margin-top: 5px;
+	font-weight: normal;
+	border-top: 1px solid #c9c9c9;
+	color: #666;
+	font-size: 16px;
+	cursor: pointer;
+	padding-bottom: 12px;
+}
+
+.treeItem .itemhead i {
+	padding: 0 5px 0 10px;
+}
+
+.treeItem .itemhead:hover {
+	color: #ae0002;
+}
+
+
+/*中部-内容左侧点击按钮,展开*/
+
+.treeItem .itemhead .expand {
+	cursor: pointer;
+	/*background-image: url(../images/btn-expand.png);
+	background-repeat: no-repeat;*/
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	display: inline-block;
+	float: right;
+	background-position: center center;
+}
+
+
+/*中部-内容左侧点击按钮,收缩*/
+
+.treeItem .itemhead .collspand {
+	cursor: pointer;
+	/*background-image: url(../images//btn-collspand.png);
+	background-repeat: no-repeat;
+	background-position: center center;*/
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	display: inline-block;
+	float: right;
+}
+
+.itemlist {
+	max-height: 300px;
+	overflow: hidden;
+}
+
+.LM_left .jstree {
+	width: 100%;
+	display: block;
+	padding-left: 5px;
+	max-height: 288px;
+	overflow-y: auto;
+}
+
+#gjc-map {
+	width: 100%;
+	height: 300px;
+}
+
+#list {
+	margin-top: 5px;
+	margin-left: 15px;
+	height: 100%;
+	width: 72%;
+	border: 1px solid red;
+	display: inline-block;
+	padding-left: 8px;
+	float: left;
+}
+
+.listTMain .LM_right {
+	float: right;
+	width: 100%;
+	/*padding-left: 275px;*/
+}
+
+.listTMain .LM_right .LM_con {
+	border-bottom: 3px solid #ae0002;
+	height: 46px;
+	line-height: 44px;
+	background: url(../images/list/list_1.png) left top no-repeat;
+}
+
+.listTMain .LM_right .LM_con .con_left {
+	width: 266px;
+	height: 44px;
+	line-height: 44px;
+}
+
+.listTMain .LM_right .LM_con .con_left a {
+	float: left;
+	width: 128px;
+	height: 44px;
+	line-height: 44px;
+}
+
+.listTMain .LM_right .LM_con .con_right {
+	font-size: 16px;
+	color: #5f5f5f;
+}
+
+.listTMain .LM_right .LM_con .con_right span {
+	color: #a6795c;
+}
+
+.listTMain .LM_right .LM_tool {
+	height: 55px;
+}
+
+.listTMain .LM_right .LM_tool .tool_PX {
+	height: 55px;
+	line-height: 55px;
+	margin-right: 10px;
+}
+
+.listTMain .LM_right .LM_tool .tool_PX a {
+	display: block;
+	padding: 0 10px 0 10px;
+	background: url(../images/list/tool_1.png) right 0 no-repeat;
+}
+
+.listTMain .LM_right .LM_tool .tool_PX a:hover {
+	color: #c50009;
+	background-position: right -55px;
+}
+
+.listTMain .LM_right .LM_tool .tool_On a {
+	color: #c50009;
+	background: url(../images/list/tool_2.png) right 0 no-repeat;
+}
+
+.listTMain .LM_right .LM_tool .tool_OnUp a {
+	color: #c50009;
+	background: url(../images/list/tool_3.png) right 0 no-repeat;
+}
+
+.listTMain .LM_right .LM_tool .tool_All {
+	height: 55px;
+	line-height: 55px;
+}
+
+.listTMain .LM_right .LM_tool .tool_All a {
+	display: inline-block;
+	padding: 0 0 0 24px;
+	margin-left: 10px;
+}
+
+.listTMain .LM_right .LM_tool .tool_All a:hover {
+	color: #c50009;
+}
+
+.listTMain .LM_right .LM_tool .tool_All a.AllSelect {
+	background: url(../images/list/AllSelect.png) left center no-repeat;
+	position: relative;
+}
+
+.listTMain .LM_right .LM_tool .tool_All a.AllSelect input#AllSelect {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 2px;
+	top: 18px;
+	opacity: 0;
+	filter:alpha(opacity=0);
+	filter: "alpha(opacity=0)"; /* IE 8 */
+	-moz-opacity:0;
+  -khtml-opacity: 0;
+  zoom:1;
+	cursor: pointer;
+}
+
+.listTMain .LM_right .LM_tool .tool_All a.AllKeep {
+	background: url(../images/list/AllKeep.png) left center no-repeat;
+	color: #c50009;
+}
+
+.listTMain .LM_right .LM_tool .tool_All a.AllDownload {
+	background: url(../images/list/AllDownload.png) left center no-repeat;
+	color: #c50009;
+}
+
+.listTMain .LM_right .LM_list {
+	border: 1px solid #ededed;
+	margin-bottom: 20px;
+	position: relative;
+}
+.listTMain .LM_right .LM_list:hover{
+	background: #f5f5f5;
+}
+.listTMain .LM_right .LM_list .List_label{
+	text-align: right;
+	padding: 15px 0 0 0;
+	position: relative;
+}
+.listTMain .LM_right .LM_list .List_label .labelOne{
+	position: absolute;
+	left: -5px;
+	width: 28px;
+}
+.listTMain .LM_right .LM_list .List_label .labelTwo{
+	float: left;
+	padding-left: 28px;
+	line-height: 28px;
+	background: url(../images/list/two.png) left top repeat-x;
+	text-align: left;
+	color: #fff;
+}
+.listTMain .LM_right .LM_list .List_label .labelThree{
+	float: left;
+	width: 14px;
+}
+.listTMain .LM_right .LM_list .List_label span{
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 15px;
+	color: #fff;
+}
+.listTMain .LM_right .LM_list .List_label span.on_1{
+	background: #ae0002;
+}
+.listTMain .LM_right .LM_list .List_label span.on_2{
+	background: #c39051;
+}
+
+.listTMain .LM_right .LM_list .List_label span.on_3{
+	background: #ae0002;
+}
+.listTMain .LM_right .LM_list .List_label2{position: absolute; right: 10px; bottom: 20px; height: 20px;}
+.listTMain .LM_right .LM_list .List_label2 a{
+	color: #333333;
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	padding: 5px 0;
+	margin-right: 10px;
+}
+.listTMain .LM_right .LM_list .List_label a:hover{
+	color: #ae0002;
+}
+.listTMain .LM_right .LM_list .List_label .a_sc{
+	border-right: 1px solid #cdcdcd;
+	padding: 0 15px 0 0;
+}
+.listTMain .LM_right .LM_list .List_label .a_ysc{
+	border-right: 1px solid #cdcdcd;
+	padding: 0 15px 0 0;
+}
+.listTMain .LM_right .LM_list .List_label2 a.a_xz{
+}
+.listTMain .LM_right .LM_list .List_label2 .a_xzBox{
+	background: url(../images/list/download.png) right bottom no-repeat;
+	width: 20px; height: 20px;
+	display: inline-block;
+}
+
+.listTMain .LM_right .LM_list .list_title{
+	padding: 10px;
+}
+.listTMain .LM_right .LM_list .list_title a.AllSelect {
+	float: left;
+	width: 40px;
+	height: 40px;
+	background: url(../images/list/AllSelect.png) left center no-repeat;
+	position: relative;
+}
+.listTMain .LM_right .LM_list .list_title a.AllSelect input.ListSelect {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 2px;
+	top: 10px;
+	opacity: 0;
+	filter:alpha(opacity=0);
+	filter: "alpha(opacity=0)"; /* IE 8 */
+	-moz-opacity:0;
+	-khtml-opacity: 0;
+	zoom:1;
+	cursor: pointer;
+}
+.listTMain .LM_right .LM_list .list_title h4{
+	line-height: 40px;
+	padding-left:40px;
+}
+.listTMain .LM_right .LM_list .list_title h4 span{
+	border: 0px solid #c50009;
+	border-radius: 0px;
+	color: #C50009;
+	padding: 0 0px;
+	font-weight: normal;
+}
+.listTMain .LM_right .LM_list .list_title h4 a{
+	font-size: 18px;
+	font-weight: normal;
+	display: inline-block;
+	/*padding-left: 15px;*/
+	color: #666;
+}
+.listTMain .LM_right .LM_list .list_title h4 a:hover{
+	color: #ae0002;
+}
+.listTMain .LM_right .LM_list .list_subtitle{
+	line-height: 30px;
+	padding: 0 0 0 50px;
+}
+.listTMain .LM_right .LM_list .list_subtitle span{
+	color: #7a7a7a;
+	margin-right: 15px;
+	display: inline-block;
+}
+.listTMain .LM_right .LM_list .list_reason{
+	padding: 0 50px;
+}
+.listTMain .LM_right .LM_list .list_reason h4{
+	color: #888;
+	border-top: 1px dashed #efebeb;
+	line-height: 40px;
+	padding-top: 10px;
+}
+.listTMain .LM_right .LM_list .list_reason p{
+	line-height: 26px;
+}
+.listTMain .LM_right .LM_list .list_Association{
+	padding: 0 50px 15px 50px;
+	margin-bottom:15px;
+}
+.listTMain .LM_right .LM_list .list_Association h4{
+	color: #888;
+	line-height: 40px;
+	padding-top: 10px;
+}
+.listTMain .LM_right .LM_list .list_Association .guanLian{
+	color: #7a7a7a;
+	line-height: 24px;
+}
+.listTMain .LM_right .LM_list .list_Association .guanLian span{
+	color: #C50009;
+	display: inline-block;
+	width: 30px;
+}
+.listTMain .LM_right .LM_list .list_Association .guanLian b{
+	display: inline-block;
+	width: 50px;
+	height: 24px;
+	vertical-align: middle;
+}
+
+.listTMain .LM_right .LM_list .list_Association .guanLian a{
+	color: #7a7a7a;
+	display:inline-block;
+	width:80%;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	vertical-align:middle;
+}
+.listTMain .LM_right .LM_list .list_Association .guanLian a:hover{
+	color: #C50009;
+	text-decoration: underline;
+}
+.listTMain .LM_right .LM_list .list_Association .guanLian a i{
+	padding: 0 15px 0 0;
+}
+
+/*分页*/
+
+.left_7_3 {
+	text-align: center;
+	padding: 20px 0;
+	line-height: 22px;
+}
+
+.left_7_3 a {
+	border: 1px solid #d2d2d2;
+	padding: 3px 10px;
+	display: inline-block;
+	margin-left: 5px;
+	border-radius: 5px;
+    color: #886342;
+}
+
+.left_7_3 a:hover {
+	background: #c39051;
+	color: #fff;
+	border: 1px solid #c39051;
+}
+
+.left_7_3 a.active {
+	color: #fff;
+    font-size: 14px;
+    border: 1px solid #c39051;
+    border-radius: 5px;
+    background: #c39051;
+}
+
+.left_7_3 span {
+	color: #999;
+	font-size: 14px;
+	padding: 3px 7px;
+	border: 1px solid #d2d2d2;
+	display: inline-block;
+	  border-radius: 5px;
+}
+
+.page-btn-box span {
+	color: #999;
+	font-size: 14px;
+	padding: 3px 7px;
+	display: inline-block;
+}
+
+.left_7_3 select {
+	border: 1px solid #d2d2d2;
+	margin: 0;
+	padding: 0;
+	padding: 3px 7px;
+	display: inline-block;
+	border-radius: 5px;
+}
+
+
+.page-btn {
+	text-align: right;
+}
+
+.page-btn-box {
+	margin-right: 4px;
+	display: inline-block;
+}
+
+.page-num-box {
+	display: inline-block;
+	color: #999;
+	font-size: 14px;
+}
+
+.PopBox-Toast{
+	width: 220px;
+	height: 80px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: 99;
+	border-radius: 5px;
+	padding: 15px;
+	background-color: rgba(0,0,0,0.5);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000);    /*IE8支持*/
+}
+.PopBox-Toast .Pop_left{
+	width: 50px;
+	border-right: 1px solid #666;
+	text-align: center;
+}
+.PopBox-Toast .Pop_left i{
+	font-size: 26px;
+	line-height: 50px;
+	color: #fff;
+}
+.PopBox-Toast .Pop_right{
+	width: 120px;
+	color: #fff;
+	line-height: 50px;
+	font-size: 16px;
+}
+
+
+
+/*图表样式*/
+.list_charts{
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 15px;
+}
+.list_charts .LM_con {
+	border-bottom: 3px solid #ae0002;
+	height: 46px;
+	line-height: 44px;
+	background: url(../images/list/list_2.png) left top no-repeat;
+}
+
+.list_charts .LM_con .con_left {
+	width: 266px;
+	height: 44px;
+	line-height: 44px;
+}
+
+.list_charts .LM_con .con_left a {
+	float: left;
+	width: 128px;
+	height: 44px;
+	line-height: 44px;
+}
+
+.list_charts .LM_con .con_right {
+	font-size: 16px;
+	color: #5f5f5f;
+}
+
+.list_charts .LM_con .con_right span {
+	color: #a6795c;
+}
+.list_charts .Charts_main{
+	padding: 20px 20px 40px 20px;
+}
+.list_charts .Charts_main .CM_box{
+	width: 50%;
+	padding: 20px 10px 20px 10px;
+}
+.list_charts .Charts_main .CM_box .CM_list{
+	border: 1px solid #dedede;
+	padding: 0 20px 20px 20px;
+	height: 400px;
+	position:relative;
+}
+.list_charts .Charts_main .CM_box .CM_list h4{
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 18px;
+	color: #666666;
+}
+
+/*list-chart*/
+.CM_box{
+	min-width: 48%;
+}
+.charts-bar{
+	width:100%;
+	height:400px;
+	margin:0 auto;
+}
+.checkData{
+	font-size:14px;
+	color:#666;
+	position:absolute;
+	right:20px;
+	bottom:20px;
+	cursor:pointer;
+}
+/*弹窗*/
+.modal-dialog{
+	width:600px;
+	height:700px;
+	overflow: auto;
+	background:#fff;
+	margin:30px auto;
+	position:fixed;
+	margin:auto;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:999999;
+	-webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+	-ms-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+	-moz-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+	-o-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    display:none;
+}
+.modal-header{
+	text-align: right;
+	padding:15px 15px 0;
+	font-size:28px;
+	cursor:pointer;
+}
+.modal-body{
+	padding:0 0 20px;
+}
+.dataTable{
+	width:100%;
+	border-bottom:1px solid #333;
+}
+.dataTable tr.odd {
+    background-color: #f9f9f9;
+}
+.dataTable td,.dataTable th {
+    padding: 8px 10px;
+    text-align: center;
+}
+.dataTable a{
+	padding:2px 8px;
+	background:#efefef;
+	border:1px solid #ddd;
+	border-radius:2px;
+	-webkit-border-radius:2px;
+	-ms-border-radius:2px;
+	-moz-border-radius:2px;
+	-o-border-radius:2px;
+	color:#333;
+}
+
+table.dataTable td {
+    border-top: 1px solid #ddd;
+}
+.dataTable tr.even > .middle-num{
+	 background-color: #fafafa;
+}
+.dataTable tr.odd > .middle-num{
+	 background-color: #f1f1f1;
+}
+table.dataTable tr:hover{
+    background-color: #f6f6f6;
+}
+table.dataTable tr:hover .middle-num{
+   	background-color: #eaeaea;
+}
+.dataTable tr.nohover{
+	border-bottom:1px solid #333;
+}
+.dataTable tr.nohover:hover{
+	background-color: #ffffff;
+}

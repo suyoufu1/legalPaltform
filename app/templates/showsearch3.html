@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<!-- saved from url=(0109)http://wenshu.court.gov.cn/website/wenshu/181217BMTKHNT2W0/index.html?pageId=01ee5fd223fee6c82585091ede70dab3 -->
+<html xmlns:diy=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>文书列表</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="public">
+    <meta name="renderer" content="webkit">
+   <!--  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    
+    <meta http-equiv="X-XSS-Protection" content="0">
+    
+<!--    <link type="image/x-icon" rel="icon" href="http://wenshu.court.gov.cn/website/wenshu/images/favicon.ico">-->
+<!--    <link type="image/x-icon" rel="shortcut icon" href="http://wenshu.court.gov.cn/website/wenshu/images/favicon.ico">-->
+    <link rel="stylesheet" href="./wsw_files/common.css">
+    <link rel="stylesheet"  href="{{url_for('static',filename='wsw_files/common.css')}}">
+    <link rel="stylesheet" href="./wsw_files/layui.css">
+    <link rel="stylesheet"  href="{{url_for('static',filename='wsw_files/layui.css')}}">
+    <!--[if lt IE 9]><script r='m'>document.createElement("section")</script><![endif]--><script>
+      /*互联网或法院专网标识(inner:法院内网；outer:互联网)*/
+      $globalNet = "outer";
+      (function(){
+        if(!0){return;}
+        document.createElement("diy");
+        document.createElement("diy:lawyee");
+      })()
+    </script>
+    <script src="./wsw_files/jquery-1.12.4.min.js.下载"></script>
+    <script src="{{url_for('static',filename='wsw_files/jquery-1.12.4.min.js.下载')}}"></script>
+    <script src="./wsw_files/layui.js.下载"></script>
+    <script src="{{url_for('static',filename='wsw_files/layui.js.下载')}}"></script>
+    <script src="./wsw_files/version.js.下载"></script>
+    <script src="{{url_for('static',filename='wsw_files/version.js.下载')}}"></script>
+    <script>(function($) {"use strict";$.event.special.valuechange = {teardown: function (namespaces) {$(this).unbind('.valuechange');},handler: function (e) {$.event.special.valuechange.triggerChanged($(this));},add: function (obj) {$(this).on('keyup.valuechange cut.valuechange paste.valuechange input.valuechange', obj.selector, $.event.special.valuechange.handler);},triggerChanged: function (element) {var current = element[0].contentEditable === 'true' ? element.html() : element.val() , previous = typeof element.data('previous') === 'undefined' ? element[0].defaultValue : element.data('previous');if (current !== previous) {element.trigger('valuechange', [element.data('previous')]);element.data('previous', current);}}}})(window.jQuery);</script>
+<link rel="stylesheet" href="./wsw_files/listText.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='wsw_files/listText.css')}}">
+<link rel="stylesheet" href="./wsw_files/style.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='wsw_files/style.min.css')}}">
+<script src="./wsw_files/jstree.min.js.下载"></script>
+    <script src="{{url_for('static',filename='wsw_files/jstree.min.js.下载')}}"></script>
+<link rel="stylesheet" href="./wsw_files/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='wsw_files/font-awesome.min.css')}}">
+<link rel="stylesheet" href="./wsw_files/index.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='/wsw_files/index.css')}}">
+<link rel="stylesheet" href="./wsw_files/common.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='wsw_files/common.css')}}">
+<script type="text/javascript" src="./wsw_files/divscroll.js.下载"></script>
+    <script type="text/javascript" src="{{url_for('static',filename='wsw_files/divscroll.js.下载')}}"></script>
+<script type="text/javascript" src="./wsw_files/wenshulist1.js.下载"></script>
+    <script type="text/javascript" src="{{url_for('static',filename='wsw_files/wenshulist1.js.下载')}}"></script>
+<script type="text/javascript" src="./wsw_files/strToBinary.js.下载"></script>
+    <script type="text/javascript" src="{{url_for('static',filename='wsw_files/strToBinary.js.下载')}}"></script>
+<script type="text/javascript" src="./wsw_files/placeholder.js.下载"></script>
+    <script type="text/javascript" src="{{url_for('static',filename='wsw_files/placeholder.js.下载')}}"></script>
+<script src="./wsw_files/common.js.下载"></script>
+    <script  src="{{url_for('static',filename='wsw_files/common.js.下载')}}"></script>
+
+<style>
+     textarea{
+        resize:none;
+       }
+      .search-con {
+        margin-top: 0px;
+      }
+      .pageButton.disabled {
+        pointer-events: none;
+        cursor: default;
+      }
+      .jstree-default .jstree-anchor {
+        line-height: 24px;
+        max-width: 192px;
+      }
+      .jstree-anchor, .jstree-anchor:link, .jstree-anchor:visited, .jstree-anchor:hover, .jstree-anchor:active {
+        text-decoration: none;
+        color: #333;
+      }
+      .left_7_3 a {
+        margin-right: 5px;
+      }
+    .advenced-search{
+                    border: 2px solid #cd3c3f;
+                    border-right:0px;
+                }
+                .search-middle{
+                    border-top: 2px solid #cd3c3f;
+                    border-bottom: 2px solid #cd3c3f;
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                    -webkit-border-top-right-radius:0px;
+                    -moz-border-top-right-radius: 0px;
+                    -ms-border-top-right-radius: 0px;
+                    -o-border-top-right-radius: 0px;
+                    -webkit-border-bottom-right-radius:0px;
+                    -moz-border-bottom-right-radius: 0px;
+                    -ms-border-bottom-right-radius: 0px;
+                    -o-border-bottom-right-radius: 0px;
+                    margin-right:10;
+                }
+                .advencedWrapper{
+                    top:-2px;
+                }
+                .search-rightBtn{
+                    width:85px;
+                    background:#cd3c3f;
+                    border-radius:0px;
+                    font-size:20px;
+                    letter-spacing: 17px;
+                }
+</style>
+    <style type="text/css">
+    *{
+            padding: 0;
+            margin: 0;
+        }
+        .search{
+            width: 25%;
+            margin: 60px auto;
+            display: flex;
+            /*border: 1px solid red;*/
+        }
+        .search input{
+            width:90%;
+            float: left;//左浮动
+            flex: 8;
+            height: 50px;
+            outline: none;
+            border: 1px solid red;
+            box-sizing: border-box;//盒子模型，怪异IE盒子模型，
+            width=content+border*2+padding*2
+            padding-left: 15px;
+        }
+        .search button{
+            width:10%;
+            float: right;
+            flex: 1;
+            height: 50px;
+            background-color: red;
+            color: white;
+            border-style: none;
+            outline: none;
+        }
+        .search button i{
+            font-style: normal;
+        }
+        .search button:hover{
+            font-size: 16px;
+        }
+
+</style>
+<script type="text/javascript">
+  //智能提示列表index
+  var liInd = -1;
+
+</script>
+
+    <!--解决ie9以下媒体查询分辨率问题-->
+    <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+    
+  
+    
+    <script src="./wsw_files/index.js.下载"></script>
+            <script  src="{{url_for('static',filename='wsw_files/index.js.下载')}}"></script>
+
+    <script src="./wsw_files/website.js.下载" type="text/javascript"></script>
+            <script  src="{{url_for('static',filename='wsw_files/website.js.下载')}}" type="text/javascript"></script>
+
+    <!-- Gridsum tracking code begin. 国双流量监测探针-->
+    <script type="text/javascript">
+      if($globalNet=='outer1'){
+        var _gsq = _gsq || [];
+        (function () {
+          var s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.async = true;
+          s.src = (location.protocol == 'https:' ? 'https://ssl.' : 'http://static.') + 'gridsumdissector.com/js/Clients/GWD-002808-030F33/gs.js';
+          var    firstScript = document.getElementsByTagName('script')[0];
+          firstScript.parentNode.insertBefore(s, firstScript);
+        })();
+      }
+      function toPage(url){
+    	  window.location.href=url+"&pageId="+Math.random();
+      }
+      function login(url){
+    		if(navigator.userAgent.indexOf("MSIE")>-1){
+                var referLink = document.createElement('a');
+                referLink.href=url;
+                document.body.appendChild(referLink);
+                referLink.click();
+            }else{
+            	window.location.href=url;
+            }
+      }
+    </script>
+    <!--Gridsum tracking code end. -->
+
+  <link id="-layer" rel="stylesheet" href="./wsw_files/layer.css" media="all">
+        <link id="layuicss-layer" rel="stylesheet" href="{{url_for('static',filename='wsw_files/layer.css')}}" >
+    <link id="-laydate" rel="stylesheet" href="./wsw_files/laydate.css" media="all">
+        <link id="layuicss-laydate" rel="stylesheet" href="{{url_for('static',filename='wsw_files/laydate.css')}}" media="all">
+</head>
+  <body class="vsc-initialized">
+  <div class="main">
+
+    
+
+
+
+    <!-- <div class="item_table" data-id="3dec8c82614adc710a477b688edb63cb"><diy:lawyee id="_view_1545034746000" var-name="_var_name_1545034746000"><div></div></diy:lawyee></div> -->
+    
+    <div class="haeder" style=" text-align:center;margin-top:30px;">  
+      
+  
+    	<div >
+           <h1  style="font-size:80px; font-weight:bold; font-family:'Times New Roman', Times, serif; color:rgb(15, 5, 5); ">
+            法律要素检索
+          </h1>
+       </div>
+            <div >
+            <form action="/searchs/search/keyword/" method="post" class="subscribe-form">
+                            <!--<div class="search-middle" style="text-align:center;margin:auto; left:0; right:0; margin-top:130px;">
+                                <input type="text" class="searchKey search-inp" name="keyword" placeholder="输入案由、关键词、法院、当事人、律师" data-val="s21">
+                            </div>-->
+                            <div class="search">
+                                <input type="text" class="searchKey search-inp" name="keyword" placeholder="输入案由、关键词、法院、当事人、律师"  data-val="s21" />
+                                <button><i>搜索</i></button>
+<!--                            <div class="search-rightBtn search-click">-->
+<!--                                <button type="submit" >检索</button>-->
+<!--                            </div>-->
+                                </div>
+
+            </form>
+       </div>
+
+    </div>
+  </div>
+    
+<div class="item_table" data-id="86d9103fca4fb504abae00c4d2026efc" >
+
+<div class="listTMain clearfix">
+  <div class="LM_left item_table" data-id="2cc587adffa937b7cdb0bf493df29fcd" data-desc="左边树">
+	  <diy:lawyee id="_view_1545094675000" var-name="_var_name_1545094675000" style="display: inline;">
+		  <div class="treeItem" style="margin-top: -5px;">
+			 </div></diy:lawyee>
+
+	  <diy:lawyee id="_view_1545034785000" var-name="_var_name_1545034785000" style="display: inline;"><div class="treeItem" style="margin-top: -5px;"> <div class="itemhead"> <i class="fa fa fa-list-alt"></i> <span>案件类型</span>
+	  <div class="collspand fa fa-angle-right"></div></div>
+	  <div class="jstree jstree-6 jstree-default" role="tree" aria-multiselectable="true" tabindex="0" aria-activedescendant="1" aria-busy="false"><ul class="jstree-container-ul jstree-children" role="group">
+
+		  <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i>
+				<a  href="{{ url_for('searchs.court',court='刑事裁定书') }}"> 刑事裁定书</a></li>
+		 <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i>
+                    <a  href="{{ url_for('searchs.court',court='民事判决书') }}"><span>   民事判决书</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i>
+						<a  href="{{ url_for('searchs.court',court='刑事判决书') }}"><span>   刑事判决书</span></a></li>
+		   <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i>
+                    <a  href="{{ url_for('searchs.court',court='执行裁定书') }}"><span>   执行裁定书</span></a></li>
+		   <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i>
+                    <a  href="{{ url_for('searchs.court',court='刑事附带民事判决书') }}"><span> 刑事附带民事判决书</span></a></li>
+
+		</ul></div> </div></diy:lawyee>
+
+
+
+	  <diy:lawyee id="_view_1545095958000" var-name="_var_name_1545095958000" style="display: inline;"><div class="treeItem" style="margin-top: -5px;"> <div class="itemhead">
+		  <i class="fa fa fa-bank"></i> <span>地域及法院</span>
+		  <div class="collspand fa fa-angle-right"></div> </div>
+		  <div class="jstree jstree-8 jstree-default" role="tree" aria-multiselectable="true" tabindex="0" aria-activedescendant="0" aria-busy="false">
+			  <ul class="jstree-container-ul jstree-children" role="group">
+				<li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='山西') }}"><span>山西省</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='贵州') }}"><span>贵州省</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='湖南') }}"><span>湖南省</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='湖北') }}"><span>湖北省</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='北京') }}"><span>北京市</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='上海') }}"><span>上海市</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='河北') }}"><span>河北省</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='辽宁') }}"><span>辽宁省</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='吉林') }}"><span>吉林省</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='江西') }}"><span>江西省</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='重庆') }}"><span>重庆市</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='云南') }}"><span>云南省</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='浙江') }}"><span>浙江省</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='湖南') }}"><span>甘肃省</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='黑龙江') }}"><span>黑龙江省</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='山东') }}"><span>山东省</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='广东') }}"><span>广东省</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='河南') }}"><span>河南省</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='西藏自') }}"><span>西藏自治区</span></a></li>
+                      <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='内蒙古') }}"><span>内蒙古自治区</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='新疆维' ) }}"><span>新疆维吾尔自治区</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='宁夏') }}"><span>宁夏回族自治区</span></a></li>
+                     <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='广西') }}"><span>广西壮族自治区</span></a></li>
+
+
+	  		</ul>
+		  </div>
+	  </div>
+	  </diy:lawyee>
+	  <diy:lawyee id="_view_1545096058000" var-name="_var_name_1545096058000" style="display: inline;"><div class="treeItem" style="margin-top: -5px;">
+		  <div class="itemhead"> <i class="fa fa fa-calendar"></i> <span>裁判年份</span> <div class="collspand fa fa-angle-right">
+
+		  </div>
+		  </div>
+		  <div class="jstree jstree-9 jstree-default" role="tree" aria-multiselectable="true" tabindex="0" aria-activedescendant="j9_1" aria-busy="false">
+			<ul class="jstree-container-ul jstree-children" role="group">
+					<li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='2018') }}"><span>2020</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='2017') }}"><span>2019</span></a></li>
+					<li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='2018') }}"><span>2018</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='2017') }}"><span>2017</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='2016') }}"><span>2016</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='2015') }}"><span>2015</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='2014') }}"><span>2014</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='2013') }}"><span>2013</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='2012') }}"><span>2012</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='2011') }}"><span>2011</span></a></li>
+		  </ul>
+		  </div>
+	  </div>
+	  </diy:lawyee>
+       <diy:lawyee id="_view_1545096058000" var-name="_var_name_1545096058000" style="display: inline;"><div class="treeItem" style="margin-top: -5px;">
+		  <div class="itemhead"> <i class="fa fa fa-file-text-o"></i> <span>关键词</span> <div class="collspand fa fa-angle-right">
+
+		  </div>
+		  </div>
+		  <div class="jstree jstree-9 jstree-default" role="tree" aria-multiselectable="true" tabindex="0" aria-activedescendant="j9_1" aria-busy="false">
+			<ul class="jstree-container-ul jstree-children" role="group">
+					<li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='合同') }}"><span>合同</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='利息') }}"><span>利息</span></a></li>
+					<li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='违约金') }}"><span>违约金</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='非法占有') }}"><span>非法占有</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='自首') }}"><span>2016</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='离婚') }}"><span>离婚</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='危险') }}"><span>危险</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='担保') }}"><span>担保</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='处分') }}"><span>处分</span></a></li>
+                    <li role="treeitem" aria-selected="false" aria-level="1" aria-labelledby="1_anchor" aria-expanded="false" id="1" class="jstree-node  jstree-closed"><i class="jstree-icon jstree-ocl" role="presentation"></i><a href="{{ url_for('searchs.court',court='赔偿') }}"><span>赔偿</span></a></li>
+		  </ul>
+		  </div>
+	  </div>
+	  </diy:lawyee>
+	 </div>
+
+
+
+  <div class="LM_right item_table" data-id="1161ebf6927364f0ac69149b6e929f25" data-desc="检索条件" style="width: 1597.98px;">
+      <diy:lawyee id="_view_1545035259000" var-name="_var_name_1545035259000"><div class="listText"> <div class="LT_box"> <div class="LT_btn clearfix common_lt">
+
+
+
+	  <div class="LT_Filter clearfix">
+          <div class="LT_Filter_left"></div>
+          <div class="LT_Filter_right clearfix"> </div>
+      </div> </div> </div>
+      </diy:lawyee>
+
+
+      <diy:lawyee id="_view_1545184311000" var-name="_var_name_1545184311000" style="display: inline;">
+      <div class="LM_con clearfix" style="background: none;">
+          <div class="fl con_left clearfix" style="display: none;"> <a href="http://wenshu.court.gov.cn/website/wenshu/181217BMTKHNT2W0/index.html"> </a>
+              <a id="chartListBtn" href="javascript:;">
+              </a>
+          </div>
+      </div>
+
+       <div class="LM_tool clearfix">
+              <!-- <div class="fl tool_PX " data-value="s52"> <a href="javascript:;">审判程序</a> </div> --> <div class="fr tool_All">
+              <a class="AllSelect" href="javascript:;"><input type="checkbox" id="AllSelect"><label for="AllSelect">全选</label></a>
+              <a class="AllKeep" href="javascript:;">批量收藏</a> <a class="AllDownload" href="javascript:void(0);">批量下载</a>
+       </div>
+
+      </div>
+          {% block content %}
+          {% for stu in stus %}
+      <div class="LM_list">
+
+          <div class="List_label clearfix">
+            <div class="labelOne"></div>
+          <!-- <span class="on_1">推荐案例</span> -->
+          </div>
+
+                  <div class="list_title clearfix">
+                         <ul class="index_arc" >
+                            <li class="index_arc_item no_pic" style="height:auto">
+                                    <div>
+                                        <h4 class="title" style="font-size:15px"><a id="echoResult_title"  href="{{ url_for('searchs.title',title=stu.title) }}"> {{ stu.title }}</a>
+                                        </h4>
+                                    </div>
+                                    </br>
+                                          <div>
+                                            <div class="date_hits" >
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span >{{stu.documenttype}}</span>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>{{stu.year}}</span>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>{{stu.court}}</span>
+                                            </div>
+
+                                        <br>
+                                          </div>
+                            </li>
+                            </ul>
+                  </div>
+
+              <div class="List_label2 clearfix">
+                  <div class="fr">
+                      <a data-value="768bb884f6374650bbafab6f00c2cd0a" class="a_sc" href="javascript:void(0)">
+                          <i class="fa fa-heart-o"> </i> 收藏</a>
+                              <a data-value="768bb884f6374650bbafab6f00c2cd0a" class="a_xz" href="javascript:void(0)">
+                          <i class="a_xzBox"></i> 下载
+                      </a>
+                  </div>
+              </div>
+
+         </div>
+        {% endfor %}
+              <div class="left_7_3">
+                        {% if paginate.has_prev %}
+
+                            <a class="disabled pageButton" href="/searchs/search/{{parm}}/?page={{ paginate.prev_num }}">上一页</a>
+                        {% endif %}
+    <!--                    页码：-->
+                        {% for i in paginate.iter_pages()    %}
+
+
+                                <a class="btn btn-outline"  href="/searchs/search/{{parm}}/?page={{ i }}">{{ i }}</a>
+                        {% endfor %}
+                        {% if paginate.has_next %}
+                            <a class="btn btn-outline" href="/searchs/search/{{parm}}/?page={{ paginate.next_num }}">下一页</a>
+                        {% endif %}
+              </div>
+         {% endblock %}
+          <!--分页-->
+</diy:lawyee>
+</div>
+</div>
+
+  
+    <input name="__RequestVerificationToken" type="hidden" value="Wx8dJs89bknaug7yE1xN3UAf">
+    <ul class="layui-fixbar">
+        <li class="layui-icon layui-fixbar-top" lay-type="top" style="display: list-item;">
+        </li>
+    </ul>
+</body>
+</html>
