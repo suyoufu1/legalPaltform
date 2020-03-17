@@ -14,7 +14,7 @@ def search1():
     per_page = int(request.args.get('per_page', 7))
     paginate = session.query.order_by('year').paginate(page, per_page, error_out=False)
     stus = paginate.items
-    return render_template('showsearch3.html',paginate=paginate,stus=stus)
+    return render_template('showsearch.html',paginate=paginate,stus=stus)
 
 
 @search.route('/search/keyword/', methods=['POST', 'GET'])
