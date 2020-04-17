@@ -9,10 +9,13 @@ class SimHaming:
     '''利用64位数，计算海明距离'''
     def haming_distance(self, code_s1, code_s2):
         x = (code_s1 ^ code_s2) & ((1 << 64) - 1)
+        y = (1 << 64) -1
+        print(y)
         ans = 0
         while x:
             ans += 1
             x &= x - 1
+        print(ans)
         return ans
     '''利用相似度计算方式,计算全文编码相似度'''
     def get_similarity(self, a, b):
@@ -37,6 +40,7 @@ class SimHaming:
     '''计算s1与s2之间的距离'''
     def distance(self, s1, s2):
         code_s1 = self.get_code(s1)
+        print(code_s1)
         code_s2 = self.get_code(s2)
         similarity = (100 - self.haming_distance(code_s1,code_s2)*100/64)/100
         return similarity

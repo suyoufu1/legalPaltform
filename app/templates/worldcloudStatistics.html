@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title></title>
-	
+    <title>法律案情统计分析</title>
+	<link type="image/x-icon" rel="icon" href="https://img.zcool.cn/community/017d8d5a7342e8a80120a12327632e.png@1280w_1l_2o_100sh.png"><!--添加头logo-->
     <link rel="stylesheet" type="text/css" href="../static/css/nav.css">
      <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/nav.css')}}">
 
@@ -34,7 +34,7 @@
         </div>
         <ul>
             <li class="nav-item">
-                <a href="http://47.106.183.183:8084/statistics/dstatistic"><i class="my-icon nav-icon icon_1"></i><span>以涉案人员关键字进行统计</span></a>
+                <a href="#"><i class="my-icon nav-icon icon_1"></i><span>以关键字进行统计</span></a>
             
             <ul>
 
@@ -98,7 +98,7 @@
         <div style="  margin-top: 0px width:86%; height:7.6%; background-color:#263238; text-align:center">
             </br>
             <form class="search" action="/statistics/dstatistic/zhiftu" method="post">
-                    <input onkeypress="if(event.keyCode==13) {submitBtn.click();return false;}" name="keyword1" placeholder="输入涉案人员进行统计">
+                    <input onkeypress="if(event.keyCode==13) {submitBtn.click();return false;}" name="keyword1" placeholder="输入关键字进行统计">
                     <button type="submit">统计</button>
                 </form>
             </div>

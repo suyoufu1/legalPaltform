@@ -110,22 +110,21 @@ def DT(DT):
 def keyword():
 
       keyword=request.form['keyword1']
-      number = np.arange(6)
+      number = np.arange(5)
       number[0] = session.query.filter(and_(session.keyword.like('%' + keyword + '%'),session.documenttype=="刑事裁定书")).count()
       number[1] = session.query.filter(and_(session.keyword.like('%' + keyword + '%'), session.documenttype == "刑事判决书")).count()
       number[2] = session.query.filter(and_(session.keyword.like('%' + keyword + '%'), session.documenttype == "执行裁定书")).count()
       number[3] = session.query.filter(and_(session.keyword.like('%' + keyword + '%'), session.documenttype == "民事判决书")).count()
-      number[4] = session.query.filter(and_(session.keyword.like('%' + keyword + '%'), session.documenttype == "刑事附带民事判决书")).count()
-      number[5]=0
+      number[4]=0
 
-      font = {'family' : 'sans-serif','weight' : 'normal','size' : 23}
+      font = {'family' : 'sans-serif','weight' : 'normal','size' :43}
       plt.style.use("ggplot")
       # 创建一个点数为 8 x 6 的窗口, 并设置分辨率为 80像素/每英寸
-      plt.figure(figsize=(25, 20), dpi=500)
+      plt.figure(figsize=(30, 25), dpi=500)
       # 再创建一个规格为 1 x 1 的子图
       plt.subplot(1, 1, 1)
       # 柱子总数
-      N = 6
+      N = 5
       # 包含每个柱子对应值的序列
       values = number
       # 包含每个柱子下标的序列
@@ -135,20 +134,21 @@ def keyword():
       # 绘制柱状图, 每根柱子的颜色为紫罗兰色
       p2 = plt.bar(index, values, tick_label=number,label="rainfall",color="#87CEFA")
       # 设置横轴标签
-      plt.xlabel("案件类型",font)
+      plt.xlabel("案件类型",font,fontsize="60")
       # 设置纵轴标签
-      plt.ylabel('数量 (个)',font)
+      plt.ylabel('数量 (个)',font,fontsize="60")
       # 添加标题
-      plt.title('"'+keyword+'"'+"所对应的案件类型数量直方图",fontsize=50,color="purple")
+      # plt.title('"'+keyword+'"'+"所对应的案件类型数量直方图",fontsize=60,color="purple")
       # 添加纵横轴的刻度
-      plt.xticks(index, ('民事判决书', '执行裁定书', '刑事裁定书', '刑事判决书', '刑事附带民事裁定书','其他'),fontsize="30")
-      plt.yticks(np.arange(0, max(number)+5, int((max(number)+5)/10+1)),fontsize=30)
+      plt.xticks(index, ('民事判决书', '执行裁定书', '刑事裁定书', '刑事判决书', '其他'),fontsize="60")
+      plt.yticks(np.arange(0, max(number)+4, int((max(number)+4)/10+1)),fontsize=50)
       '''
       for rect in p2: 
             height = rect.get_height() 
             plt.text(rect.get_x() + rect.get_width() / 2, height+1, str(height), ha="center", va="bottom",size=20)
       '''
+      plt.title('"' + keyword + '"' + "所对应的案件类型数量直方图", fontsize=80, color="purple",alpha=1.5)
       # 添加图例
-      plt.savefig("app/static/tongji/"+"tongji.jpg")
+      plt.savefig("app/static/" + "tongji.jpg")
       return render_template('keywordStatistics.html',val1=time.time())
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- saved from url=(0109)http://wenshu.court.gov.cn/website/wenshu/181217BMTKHNT2W0/index.html?pageId=01ee5fd223fee6c82585091ede70dab3 -->
 <html xmlns:diy=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+    <link type="image/x-icon" rel="icon" href="https://img.zcool.cn/community/017d8d5a7342e8a80120a12327632e.png@1280w_1l_2o_100sh.png"><!--添加头logo-->
     <title>文书列表</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Cache-Control" content="public">
@@ -16,6 +16,8 @@
     
 <!--    <link type="image/x-icon" rel="icon" href="http://wenshu.court.gov.cn/website/wenshu/images/favicon.ico">-->
 <!--    <link type="image/x-icon" rel="shortcut icon" href="http://wenshu.court.gov.cn/website/wenshu/images/favicon.ico">-->
+    <link type="image/x-icon" rel="icon" href="https://img.zcool.cn/community/017d8d5a7342e8a80120a12327632e.png@1280w_1l_2o_100sh.png"><!--添加头logo-->
+
     <link rel="stylesheet" href="./wsw_files/common.css">
     <link rel="stylesheet"  href="{{url_for('static',filename='wsw_files/common.css')}}">
     <link rel="stylesheet" href="./wsw_files/layui.css">
@@ -57,8 +59,15 @@
 <script type="text/javascript" src="./wsw_files/placeholder.js.下载"></script>
     <script type="text/javascript" src="{{url_for('static',filename='wsw_files/placeholder.js.下载')}}"></script>
 <script src="./wsw_files/common.js.下载"></script>
-    <script  src="{{url_for('static',filename='wsw_files/common.js.下载')}}"></script>
-
+    <script  src="{{url_for('static',filename='wsw_files/common.js.下载')}}">
+	</script>
+<script>
+    $(document).ready(function () {
+              $(".btn-back").click(function () {
+            window.history.back();
+        });
+  })
+</script>
 <style>
      textarea{
         resize:none;
@@ -174,11 +183,11 @@
 
     <!-- <div class="item_table" data-id="3dec8c82614adc710a477b688edb63cb"><diy:lawyee id="_view_1545034746000" var-name="_var_name_1545034746000"><div></div></diy:lawyee></div> -->
     
-    <div class="haeder" style=" text-align:center;margin-top:80px;">
+    <div class="haeder" style=" text-align:center;margin-top:40px;margin-bottom: 10px">
       
   
     	<div >
-           <h1  style="font-size:80px; font-weight:bold; font-family:'Times New Roman', Times, serif; color:rgb(15, 5, 5); ">
+           <h1  style="font-size:70px; font-weight:bold; font-family:'Times New Roman', Times, serif; color:rgb(15, 5, 5); ">
             类似案件推荐
           </h1>
        </div>
@@ -206,9 +215,25 @@
 
 
       <diy:lawyee id="_view_1545184311000" var-name="_var_name_1545184311000" style="display: inline;">
-      <div class="LM_con clearfix" style="background: none;">
-          <div class="tab-category" ><strong>案件 当前数量:{{num}}</strong></div>
-            <div  ><strong><a href="http://127.0.0.1:5000/recomments/recomment">返回</a> </strong></div>
+      <div class="LM_con clearfix" style="background: none;margin-top: 0px">
+          <div class="tab-category" >
+			  <strong>相似文书设置阈值:  <em style="color: coral;align-content: center">0.75</em> 
+				  
+				  <a href="/recomments/recomment" style="display: inline-block; text-align: right; width: 1500px;">
+				  		返回
+				</a>    
+				       
+			  </strong>
+		  	
+				
+					
+					 
+						
+				
+			  
+		  
+		  </div>
+																									
           <div class="fl con_left clearfix" style="display: none;"> <a href="http://wenshu.court.gov.cn/website/wenshu/181217BMTKHNT2W0/index.html"> </a>
               <a id="chartListBtn" href="javascript:;">
               </a>
@@ -223,7 +248,8 @@
 
       </div>
 
-          {% for result in result %}
+          {% for res in result %}
+		  
       <div class="LM_list">
 
           <div class="List_label clearfix">
@@ -235,39 +261,28 @@
 
 
 
-			<ul class="index_arc" >
+			 <div class="list_title clearfix">
+                         <ul class="index_arc" >
+                            <li class="index_arc_item no_pic" style="height:auto">
+                                    <div>
+                                        <h4 class="title" style="font-size:15px"><a id="echoResult_title"  href="{{ url_for('recomments.title',title=res.title) }}"> {{ res.title }}   </a> 
+											<em style="color: coral;align-content: center">{{list1[result.index(res)]}}
+											</em>
+                                        </h4>
+                                    </div>	
+                                    </br>
+                                          <div>
+                                            <div class="date_hits" >
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span >{{res.documenttype}}</span>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>{{res.year}}</span>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>{{res.court}}</span>
+                                            </div>
 
-
-				<li class="index_arc_item no_pic" style="height:auto">
-               <div>
-                 <h4 class="title" style="font-size:15px">
-                  <a id="echoResult_title" href="{{ url_for('searchs.title',title=result.title) }}">
-                    {{result.title}}
-                  </a>
-                </div>
-
-                </br>
-              <div>
-					<div class="date_hits" >
-                        <span>{{result.documenttype}}</span>
-                        <span></span>
-                        <span>{{result.court}}</span>
-
-
-                    </div>
-                    <div class="date_hits" >
-                    {{result.information_people}}<br>
-
-
-                    </div>
-
-                </li>
-
-
-
-          </ul>
-
-
+                                        <br>
+                                          </div>
+                            </li>
+                            </ul>
+                  </div>
               <div class="List_label2 clearfix">
                   <div class="fr">
                       <a data-value="768bb884f6374650bbafab6f00c2cd0a" class="a_sc" href="javascript:void(0)">
@@ -277,9 +292,9 @@
                       </a>
                   </div>
               </div>
-        {% endfor %}
-         </div>
 
+         </div>
+  {% endfor %}
           <!--分页-->
 </diy:lawyee>
 </div>
@@ -291,5 +306,6 @@
         <li class="layui-icon layui-fixbar-top" lay-type="top" style="display: list-item;">
         </li>
     </ul>
+</div>
 </body>
 </html>

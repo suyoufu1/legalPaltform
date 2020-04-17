@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <link type="image/x-icon" rel="icon" href="https://img.zcool.cn/community/017d8d5a7342e8a80120a12327632e.png@1280w_1l_2o_100sh.png"><!--添加头logo-->
 <title></title>
 <meta charset="utf-8">
 <meta name="renderer" content="webkit|ie-comp|ie-stand">
@@ -12,22 +13,30 @@
 <LINK rel="Shortcut Icon" href="/static/favicon.ico" />
 <!--[if lt IE 9]>
 <script type="text/javascript" src="/staticRes/js/html5shiv.js"></script>
+    <script type="text/javascript" src="{{url_for('staticRes',filename='js/html5shiv.js')}}">
 <script type="text/javascript" src="/staticRes/js/respond.min.js"></script>
+     <script type="text/javascript" src="{{url_for('staticRes',filename='js/respond.min.js')}}">
 <![endif]-->
 <link rel="stylesheet" type="text/css" href="/static/plugin/h-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" href="{{url_for('static',filename='plugin/h-ui/css/H-ui.min.css')}}">
 <link rel="stylesheet" type="text/css" href="/static/plugin/Hui-iconfont/1.0.8/iconfont.min.css" />
+    <link rel="stylesheet" href="{{url_for('static',filename='plugin/Hui-iconfont/1.0.8/iconfont.min.css')}}">
 <link rel="stylesheet" type="text/css" href="/static/css/common.css" />
-
+    <link rel="stylesheet" href="{{url_for('static',filename='css/common.css')}}">
   
   <link rel="stylesheet" href="/static/css/font-awesome.min.css">
-  
+  <link rel="stylesheet" href="{{url_for('static',filename='css/font-awesome.min.css')}}">
   <link rel="stylesheet" href="/static/css/demo.css" />
+    <link rel="stylesheet" href="{{url_for('static',filename='css/demo.css')}}">
   <link rel="stylesheet" href="/static/css/templatemo-style.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/templatemo-style.css')}}">
   <link rel="stylesheet" href="/static/css/page.css">
+     <link rel="stylesheet" href="{{url_for('static',filename='css/page.css')}}">
   <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
-  <script src="/static/js/jquery-2.2.3.min.js"></script>
+  <script src="/static/js/jquery-2.2.3.min.js">
+     <script src="{{url_for('static',filename='js/jquery-2.2.3.min.js')}}">
   <script src="/static/js/page.js"></script>
-
+    <script src="{{url_for('static',filename='js/page.js')}}">
   <script type="text/javascript">
 	$(function() {
 	  $("#submitBtn").click(function() {
@@ -92,7 +101,7 @@
   		
 		<div class="mt-20 bg-fff box-shadow radius mb-5">
 			<div class="tab-category" ><strong>案件 当前数量:{{num}}</strong></div>
-            <div  ><strong><a href="http://47.106.183.183:8084/recomments/recomment">返回</a> </strong></div>
+            <div  ><strong><a href="/recomments/recomment">返回</a> </strong></div>
         </div>
 		<div class="art_content" style=" overflow-y:auto; overflow-x:auto;  ">
     {% for result in result %}

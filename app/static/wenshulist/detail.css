@@ -7,10 +7,11 @@ table td{
 	background: #eee8d8;
 }
 .detailBg .detailBox{
-	width: 90%;
-	margin: 0 auto;
+	width: 70%;
+	height: 100%;
+	margin: 0 auto; 
 	background: #fff;
-	padding: 25px 0;
+	padding: 0px 0;
 	position: relative;
 }
 .detailBg .detailBox .del_left{
@@ -93,7 +94,7 @@ table td{
 	/*min-height: 1200px;*/
 }
 .detailBg .detailBox .del_center .PDF_box{
-	padding: 25px 25px 0 25px;
+	padding: 25px 25px 25px 25px;
 	border: 1px solid #ddd;
 }
 .detailBg .detailBox .del_center .PDF_box .PDF_title{

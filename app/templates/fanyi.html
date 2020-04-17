@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link type="image/x-icon" rel="icon" href="https://img.zcool.cn/community/017d8d5a7342e8a80120a12327632e.png@1280w_1l_2o_100sh.png"><!--添加头logo-->
+    <title>罪名预测</title>
     <style>
         .hide {
             display: none;
@@ -15,6 +16,7 @@
             content: "";
             display: block;
             clear: both;
+			
         }
 
         .headbar {
@@ -73,9 +75,11 @@
 
         .body .right,
         .body .left {
+			
             border: 2px solid black;
             border-radius: 4px;
-            width: 600px;
+            width: 650px;
+			height: 400px;
             float: left;
             text-align: initial;
             background-color: rgb(249, 249, 249);
@@ -151,28 +155,32 @@
     </style>
 </head>
 
-<body>
-    <div class="headbar">
+<body class="vsc-initialized">
+
+    <div>
+      <div class="headbar">
         <div class="leftlogo clear">
-            <img src="{{url_for('static',filename='img/law.jpg')}}" alt="logo" class="logo">
-            <h1>案情罪名预测</h1>
-        </div>
+          <img src="{{url_for('static',filename='img/law.jpg')}}" alt="logo" class="logo">
+          <h1>案情罪名预测</h1>
+          </div>
         <div class="right">
-            <a href="http://47.106.183.183:8084">>>返回</a>
+          <a href="http://127.0.0.1:8084">>>返回</a>
+          </div>
         </div>
     </div>
-    <div class="body clear">
+    <div class="body clear" >
         <div class="left">
             <form action=""  method="post" class="form">
-
-                <textarea rows="7" cols="40" class="textarea" runat="server" name="keyword" placeholder="案情罪名预测是用户输入需预测的案件的案情描述，本系统利用以往大量已判决案件的案情情节描述构建罪名分类模型，该模型是采用深度学习策略学习调整后准确率达到80%以上的分类模型，通过这个模型来帮助用户预测未判决案件的罪名" id="send"></textarea>
+				<!--<div class="submit">请输入案情描述:</div>-->
+				<h2>请输入案情描述:</h2>
+                <textarea rows="9" cols="40" class="textarea" runat="server" name="keyword" placeholder="案情罪名预测是用户输入需预测的案件的案情描述，本系统利用以往大量已判决案件的案情情节描述构建罪名分类模型，该模型是采用深度学习策略学习调整后准确率达到80%以上的分类模型，通过这个模型来帮助用户预测未判决案件的罪名" id="send"></textarea>
 
 
 
 
             </form>
             </div>
-        <div class="middle">
+        <div class="middle" >
             <button id="submit" class="submit">
                 开始预测
                 <script>
@@ -209,8 +217,7 @@
 
 
     </div>
-    <script>
-    </script>
+
 </body>
 
 </html>

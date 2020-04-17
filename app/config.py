@@ -17,7 +17,7 @@ class DevelopmentConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'mysql://root:520000ww@cdb-lx6fvfvk.cd.tencentcdb.com:10114/legalbook'
     # 配置redis
     REDIS_DB_URL = {
-        'host': '47.106.183.183',
+        'host': '127.0.0.1',
         'port': '9200',
         'password': '',
         'db': 1

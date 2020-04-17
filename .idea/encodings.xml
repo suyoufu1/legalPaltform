@@ -3,15 +3,32 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/README.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/data" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/dict" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/model" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/model/cnn_question_classify.h5" charset="ISO-8859-1" />
-    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/model/crime_predict.model" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/word2vec" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/classifier/__model__" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/classifier/__model__" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/classifier/embedding_0.w_0" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/classifier/embedding_0.w_0" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/classifier/fc_0.b_0" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/classifier/fc_0.b_0" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/classifier/fc_0.w_0" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/classifier/fc_0.w_0" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/classifier/fc_0.w_1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/classifier/fc_0.w_1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/classifier/sequence_conv_0.b_0" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/classifier/sequence_conv_0.b_0" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/classifier/sequence_conv_0.w_0" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/classifier/sequence_conv_0.w_0" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/classifier/sequence_conv_1.b_0" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/classifier/sequence_conv_1.b_0" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/classifier/sequence_conv_1.w_0" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/algorithm/Crimeclass/classifier/sequence_conv_1.w_0" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/algorithm/IdealWordCloudKit" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/algorithm/sentencesimarly/model" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/algorithm/sentencesimarly/sim_hownet.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/static/wenshulist/detail.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/templates/laisiwenshu.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/templates/similarShow.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/templates/wenshushow.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/templates/wenshushow2.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/manage.py" charset="GBK" />
     <file url="file://$PROJECT_DIR$/requirements.txt" charset="GBK" />
   </component>

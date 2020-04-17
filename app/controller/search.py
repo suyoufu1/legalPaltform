@@ -3,15 +3,14 @@ from sqlalchemy import or_,and_
 from flask import  request, render_template, session, Blueprint
 from app.models import session
 from app.algorithm.KeyInfoExtraction.abstract_textrank import AbstarctTextrank
-from app.utils.es_search import search_keyword,search_court,search_show
-from app.utils.get_page import get_page
+from app.utils.es_search import search_court
 # 创建蓝本对象
 search = Blueprint('searchs',__name__)
 
 @search.route('/search/', methods=['GET'])
 def search1():
     page = int(request.args.get('page', 1))
-    per_page = int(request.args.get('per_page', 7))
+    per_page = int(request.args.get('per_page', 4))
     paginate = session.query.order_by('year').paginate(page, per_page, error_out=False)
     stus = paginate.items
     return render_template('showsearch.html',paginate=paginate,stus=stus)
@@ -21,22 +20,23 @@ def search1():
 def keyword():
     keyword = request.form['keyword']
     page = int(request.args.get('page', 1))
-    per_page = int(request.args.get('per_page', 7))
+    per_page = int(request.args.get('per_page', 4))
     re = session.query.filter(session.keyword.like('%'+ keyword +'%'))
     paginate = session.query.filter(session.keyword.like('%'+ keyword +'%')).paginate(page, per_page, error_out=False)
 
     stus = paginate.items
-    return render_template('showsearch2.html', paginate=paginate,stus=stus,keyword = keyword)
+    return render_template('showsearch.html', paginate=paginate,stus=stus,keyword = keyword)
 
 @search.route('/search/<court>/',endpoint="court" ,methods=['POST', 'GET'])
 def court(court, page=None):
     result = search_court(court)
     age = int(request.args.get('page', 1))
-    per_page = int(request.args.get('per_page', 7))
-    paginate = session.query.filter(or_(session.documenttype.like('%'+court+'%'), session.region.like('%'+court+'%'),  session.year == court,session.keyword.like('%'+court+'%'))).paginate(page, per_page, error_out=False)
+    per_page = int(request.args.get('per_page', 4))
+    # , session.keyword.like('%' + court + '%')
+    paginate = session.query.filter(or_(session.documenttype.like('%'+court+'%'), session.region.like('%'+court+'%'),  session.year == court)).paginate(page, per_page, error_out=False)
     stus = paginate.items
     parm = court
-    return render_template('showsearch3.html',paginate=paginate,stus = stus,parm = parm)
+    return render_template('showsearch.html',paginate=paginate,stus = stus,parm = parm)
 
 
 @search.route('/search/show/<title>', methods=['POST', 'GET'])

@@ -3,7 +3,7 @@ import time
 import json
 from elasticsearch import Elasticsearch
 # 连接ES
-es = Elasticsearch(["47.106.183.183:9200"])
+es = Elasticsearch(["127.0.0.1:9200"])
 '''根据关键字进行事件的匹配查询'''
 def search_keyword(value):
     query_body = {
@@ -15,7 +15,7 @@ def search_keyword(value):
 
         }
     }
-    searched = es.search(index="legalbook_data", doc_type="legalbook_", body=query_body, size=100)
+    searched = es.search(index="legalbook_datas", doc_type="legalbook_", body=query_body, size=100)
     # 输出查询到的结果
     list = []
     for da in searched["hits"]["hits"]:
@@ -33,7 +33,7 @@ def search_document(value):
                     }
         }
     }
-    searched = es.search(index="legalbook_data", doc_type="legalbook_", body=query_body, size=100)
+    searched = es.search(index="legalbook_datas", doc_type="legalbook_", body=query_body, size=100)
     list = []
     for da in searched["hits"]["hits"]:
         list.append(da["_source"])
@@ -48,7 +48,7 @@ def search_title(value):
         }
         }
     }
-    searched = es.search(index="legalbook_data", doc_type="legalbook_", body=query_body,size = 1000)
+    searched = es.search(index="legalbook_datas", doc_type="legalbook_", body=query_body,size = 1000)
     list = []
     for da in searched["hits"]["hits"]:
         list.append(da["_source"])
@@ -62,7 +62,7 @@ def search_region(value):
         }
         }
     }
-    searched = es.search(index="legalbook_data", doc_type="legalbook_", body=query_body,size = 1000)
+    searched = es.search(index="legalbook_datas", doc_type="legalbook_", body=query_body,size = 1000)
     list = []
     for da in searched["hits"]["hits"]:
         list.append(da["_source"])
@@ -78,7 +78,7 @@ def search_unio(value):
         }
 
     }
-    searched = es.search(index="legalbook_data", doc_type="legalbook_", body=query_body,size = 1000)
+    searched = es.search(index="legalbook_datas", doc_type="legalbook_", body=query_body,size = 1000)
     list = []
     for da in searched["hits"]["hits"]:
         list.append(da["_source"])
@@ -94,7 +94,7 @@ def search_sim(text):
                     }
         }
     }
-    searched = es.search(index="legalbook_data", doc_type="legalbook_", body=query_body, size=8)
+    searched = es.search(index="legalbook_datas", doc_type="legalbook_", body=query_body, size=6)
     list = []
     for da in searched["hits"]["hits"]:
         list.append(da["_source"])
@@ -109,7 +109,7 @@ def search_all():
             }
         }
     }
-    searched = es.search(index="legalbook_data", doc_type="legalbook_", body=query_body, size=500)
+    searched = es.search(index="legalbook_datas", doc_type="legalbook_", body=query_body, size=500)
     list = []
     for da in searched["hits"]["hits"]:
         list.append(da["_source"])
@@ -127,7 +127,7 @@ def search_show(value):
         }
       }
     }
-    searched = es.search(index="legalbook_data", doc_type="legalbook_", body=query_body, size=10000)
+    searched = es.search(index="legalbook_datas", doc_type="legalbook_", body=query_body, size=10000)
     list = []
     for da in searched["hits"]["hits"]:
         list.append(da["_source"])
@@ -146,7 +146,7 @@ def search_court(value):
         }
 
     }
-    searched = es.search(index="legalbook_data", doc_type="legalbook_", body=query_body,size = 1000)
+    searched = es.search(index="legalbook_datas", doc_type="legalbook_", body=query_body,size = 1000)
     list = []
     for da in searched["hits"]["hits"]:
         list.append(da["_source"])
@@ -164,7 +164,7 @@ def search_empty():
         }
 
     }
-    searched = es.search(index="legalbook_data", doc_type="legalbook_", body=query_body,size = 1000)
+    searched = es.search(index="legalbook_datas", doc_type="legalbook_", body=query_body,size = 1000)
     list = []
     for da in searched["hits"]["hits"]:
         list.append(da["_source"])
@@ -179,7 +179,7 @@ def es_nums():
         }
 
     }
-    searched = es.count(index="legalbook_data",  doc_type="legalbook_", body=query_body)
+    searched = es.count(index="legalbook_datas",  doc_type="legalbook_", body=query_body)
     # list = []
     # for da in searched["hits"]["hits"]:
     #     list.append(da["_source"])
