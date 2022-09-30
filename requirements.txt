@@ -41,7 +41,7 @@ itsdangerous==0.24
 jieba==0.42.1
 Jinja2==2.10
 jmespath==0.9.4
-joblib==0.14.1
+joblib==1.2.0
 keywords==0.0.1
 kiwisolver==1.1.0
 Mako==1.0.7
